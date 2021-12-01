@@ -1,0 +1,21 @@
+@import "../abstracts/all";
+header {
+    #main-navbar {
+        @include navbarfont;
+    }
+    ul,
+    ul li {
+        list-style-type: none;
+        text-transform: capitalize;
+    }
+    a {
+        text-decoration: none !important;
+    }
+    .logo {
+        padding: 0;
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+    }
+}
