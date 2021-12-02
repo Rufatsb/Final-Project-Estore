@@ -378,7 +378,60 @@ input {
 }
 
 #main-navbar .bottom-header .bottom-header-nav {
-  width: 57% !important;
+  width: 54% !important;
+}
+
+.bottom-header .col-12 .mobile-navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.bottom-header .col-12 .mobile-navbar #myLinks {
+  display: none;
+  clear: both;
+  color: #fff;
+  margin: 0;
+  font-size: .875em;
+}
+
+.bottom-header .col-12 .mobile-navbar a {
+  color: white !important;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+.bottom-header .col-12 .mobile-navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.bottom-header .col-12 .mobile-navbar .icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.bottom-header .col-12 .mobile-navbar .active {
+  color: white;
+}
+
+.bottom-header .col-12 .mobile-navbar .mobile-navbar-menu {
+  font-size: 16px;
+  background: #4c4c4c;
+  padding: 5px;
+}
+
+.bottom-header .col-12 .mobile-navbar .nav-item .mobileanchor {
+  padding: 5px 10px;
+}
+
+.bottom-header .col-12 .mobile-navbar .nav-item a {
+  padding: 10px 19px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1600px) {
@@ -387,7 +440,7 @@ input {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
   #main-navbar .bottom-header {
     padding: 12px 25px !important;
   }
@@ -399,9 +452,55 @@ input {
   }
 }
 
-@media only screen and (max-width: 987px) {
-  .bottom-header-right .shopping {
-    display: inline-block;
+@media only screen and (min-width: 576px) and (max-width: 987px) {
+  .bottom-header .fix-card {
+    position: absolute;
+    top: 12px;
+    right: 0px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #main-navbar .bottom-header {
+    padding: 20px 45px !important;
+  }
+  .bottom-header .fix-card {
+    padding-left: 0px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 988px) and (max-width: 1200px) {
+  .bottom-header .fix-card {
+    position: relative !important;
+    right: -10% !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #main-navbar .bottom-header .nav .nav-item ul {
+    position: absolute;
+    width: unset;
+    background: unset;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    padding: 20px 0;
+    border-top: unset;
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+    color: unset;
+    left: unset;
+    top: unset;
+    padding: 0;
+  }
+  #main-navbar .bottom-header .nav .nav-item ul li {
+    display: block;
+    position: relative;
+    left: -100px;
+    top: -49px;
+    padding-top: 0px;
   }
 }
 

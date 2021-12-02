@@ -4,7 +4,7 @@
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
     #main-navbar .bottom-header {
         padding: 12px 25px !important;
     }
@@ -16,8 +16,56 @@
     }
 }
 
-@media only screen and (max-width: 987px) {
-    .bottom-header-right .shopping {
-        display: inline-block;
+@media only screen and (min-width: 576px) and (max-width: 987px) {
+    .bottom-header .fix-card {
+        position: absolute;
+        top: 12px;
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #main-navbar .bottom-header {
+        padding: 20px 45px !important;
+    }
+    .bottom-header .fix-card {
+        padding-left: 0px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 988px) and (max-width: 1200px) {
+    .bottom-header .fix-card {
+        position: relative !important;
+        right: -10% !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #main-navbar .bottom-header .nav .nav-item ul {
+        position: absolute;
+        width: unset;
+        background: unset;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: unset;
+        padding: 20px 0;
+        border-top: unset;
+        transition: all 0.2s ease-out 0s;
+        color: unset;
+        left: unset;
+        top: unset;
+        padding: 0;
+        li {
+            display: block;
+            position: relative;
+            left: -100px;
+            top: -49px;
+            padding-top: 0px;
+            a {
+                // margin: 2px 5px;
+                // padding: 10px 19px;
+            }
+        }
     }
 }
