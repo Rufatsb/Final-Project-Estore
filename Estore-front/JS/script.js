@@ -51,10 +51,11 @@ var msticky = mobilenavbar.offsetTop;
 function FixedFunction() {
     if (window.scrollY >= sticky) {
         navbar.classList.add("sticky")
-
-    } else if (window.scrollY >= msticky) {
-        mobilenavbar.classList.add("msticky")
-    } else {
+    }
+    // } else if (window.scrollY >= msticky) {
+    //     mobilenavbar.classList.add("msticky")
+    // } 
+    else {
         navbar.classList.remove("sticky");
         mobilenavbar.classList.remove("msticky");
 
