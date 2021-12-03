@@ -1,4 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
 header #main-navbar {
   font-size: 14px;
   font-family: "Poppins", sans-serif;
@@ -21,6 +46,43 @@ header .logo {
 header .logo img {
   vertical-align: middle;
   border-style: none;
+}
+
+.sticky {
+  top: 0;
+  width: 100%;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+          box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  z-index: 9999;
+  -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+          animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  background: #fff;
+  padding: 0px 170px !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  padding-top: 15px !important;
+  padding-bottom: 0px !important;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
 }
 
 *,
@@ -141,6 +203,30 @@ input {
 
 #main-navbar .top-header .nav-item .nav-link {
   color: #fff;
+}
+
+.sticky {
+  top: 0;
+  width: 100%;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+          box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  z-index: 9999;
+  -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+          animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  background: #fff;
+  padding: 0px 170px !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  padding-top: 15px !important;
+  padding-bottom: 0px !important;
 }
 
 #main-navbar .bottom-header {
@@ -388,11 +474,17 @@ input {
 }
 
 .bottom-header .col-12 .mobile-navbar #myLinks {
-  display: none;
+  height: 0%;
   clear: both;
   color: #fff;
   margin: 0;
   font-size: .875em;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.bottom-header .col-12 .mobile-navbar #myLinks .mobile-submenu {
+  display: none;
 }
 
 .bottom-header .col-12 .mobile-navbar a {
@@ -404,8 +496,15 @@ input {
 }
 
 .bottom-header .col-12 .mobile-navbar a:hover {
-  background-color: #ddd;
   color: black;
+  border-radius: 6px;
+  background: #ccc;
+  color: #fff;
+}
+
+.bottom-header .col-12 .mobile-navbar a:focus {
+  outline: unset !important;
+  outline-offset: -2px;
 }
 
 .bottom-header .col-12 .mobile-navbar .icon {
@@ -423,15 +522,75 @@ input {
 .bottom-header .col-12 .mobile-navbar .mobile-navbar-menu {
   font-size: 16px;
   background: #4c4c4c;
-  padding: 5px;
+  padding: 8px;
+  height: 0%;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
 }
 
-.bottom-header .col-12 .mobile-navbar .nav-item .mobileanchor {
+.bottom-header .col-12 .mobile-navbar .mobile-navbar-menu::after, .bottom-header .col-12 .mobile-navbar .mobile-navbar-menu::before {
+  content: " ";
+  display: table;
+}
+
+.bottom-header .col-12 .mobile-navbar .mobile-navbar-menu::after {
+  clear: both;
+}
+
+.bottom-header .col-12 .mobile-navbar .mobile-navbar-menu .mobile-nav-btn {
+  margin: 5px 5px 6px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+  background-color: #222;
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.438em 0.625em;
+  line-height: 1.125em;
+}
+
+.bottom-header .col-12 .mobile-navbar .mobile-navbar-menu .mobile-nav-btn:hover {
+  color: unset;
+}
+
+.bottom-header .col-12 .mobile-navbar .mobile-navbar-menu .mobile-nav-btn .mobile-nav-menu-txt {
+  display: block;
+  line-height: 1.188em;
+  float: left;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 1px 3px #000;
+}
+
+.bottom-header .col-12 .mobile-navbar .mobile-navbar-menu .mobile-nav-btn .mobile-nav-icon {
+  float: left;
+  width: 1.125em;
+  height: 0.875em;
+  margin: 0.188em 0 0 0.438em;
+}
+
+.bottom-header .col-12 .mobile-navbar .mobile-navbar-menu .mobile-nav-btn .mobile-nav-icon::before {
+  background: 0 0;
+  width: 1.125em;
+  height: 0.875em;
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+.bottom-header .col-12 .mobile-navbar .mobile-navbar-menu .mobile-nav-btn .mobile-nav-icon .mobile-nav-icon-bar {
+  display: block;
+  width: 1.125em;
+  height: 0.125em;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+}
+
+.bottom-header .col-12 .mobile-navbar .mobileanchor {
   padding: 5px 10px;
-}
-
-.bottom-header .col-12 .mobile-navbar .nav-item a {
-  padding: 10px 19px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1600px) {
@@ -474,33 +633,6 @@ input {
   .bottom-header .fix-card {
     position: relative !important;
     right: -10% !important;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  #main-navbar .bottom-header .nav .nav-item ul {
-    position: absolute;
-    width: unset;
-    background: unset;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-box-shadow: unset;
-            box-shadow: unset;
-    padding: 20px 0;
-    border-top: unset;
-    -webkit-transition: all 0.2s ease-out 0s;
-    transition: all 0.2s ease-out 0s;
-    color: unset;
-    left: unset;
-    top: unset;
-    padding: 0;
-  }
-  #main-navbar .bottom-header .nav .nav-item ul li {
-    display: block;
-    position: relative;
-    left: -100px;
-    top: -49px;
-    padding-top: 0px;
   }
 }
 

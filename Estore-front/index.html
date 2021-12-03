@@ -13,7 +13,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="height:3000px;">
     <header>
         <section id="main-navbar">
             <nav class="navbar-expand-lg navbar-dark bg-black top-header  d-none d-lg-flex">
@@ -172,66 +172,66 @@
                             <div class="mobile-navbar d-block d-lg-none">
 
                                 <div class="mobile-navbar-menu">
-                                    <a class="active"> </a>
-                                    <ul id="myLinks" class="nav">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#"> Home</a>
+                                    <!-- <a tabindex="0" role="menuitem" class="active"> </a> -->
+                                    <a href="javascript:void(0);" onclick="myFunction()" aria-haspopup="true" role="button" tabindex="0" class="mobile-nav-btn icon"><span class="mobile-nav-menu-txt">MENU</span><span class="mobile-nav-icon position-relative"><span style="top:0%" class="mobile-nav-icon-bar position-absolute"></span><span style="top: 33%;" class="mobile-nav-icon-bar position-absolute"></span><span style="top: 66%;" class="mobile-nav-icon-bar position-absolute"></span></span></a>
+                                    <ul aria-hidden="true" role="menu" id="myLinks" class="mobile-navbar-ul">
+                                        <li style="padding:0px 0px;" class="mobile-navbar-li">
+                                            <a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="#"> Home</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#"> Category</a>
+                                        <li style=" padding:0px 0px;" class="mobile-navbar-li">
+                                            <a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="#"> Category</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link mobileanchor" href="#">Latest
+                                        <li style=" padding:0px 0px;" class="mobile-navbar-li">
+                                            <a tabindex="-1" role="menuitem" aria-haspopup="true" class="mobileanchor firstanchor" href="#">Latest
                                                 <span class="mobilenav-arrow">+</span>
                                             </a>
-                                            <ul>
+                                            <ul role="menu" aria-hidden="false" class="mobile-submenu firstul">
                                                 <li>
-                                                    <a class="" href="#">product list</a>
+                                                    <a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="#">product list</a>
                                                 </li>
                                                 <li>
-                                                    <a class="" href="#"> product details</a>
+                                                    <a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="#"> product details</a>
                                                 </li>
 
                                             </ul>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link mobileanchor" href="#">Blog
+                                        <li style=" padding:0px 0px;" class="mobile-navbar-li">
+                                            <a tabindex="-1" class="mobileanchor secondanchor" href="#">Blog
                                                 <span class="mobilenav-arrow">+</span>
                                             </a>
-                                            <ul>
+                                            <ul class="mobile-submenu secondul">
                                                 <li>
-                                                    <a class="" href="#">Blog</a>
+                                                    <a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="#">Blog</a>
                                                 </li>
                                                 <li>
-                                                    <a class="" href="#"> Blog details</a>
+                                                    <a tabindex="-1" role="menuitem" class="mobile-navbar-a" class="mobile-navbar-a" href="#"> Blog details</a>
                                                 </li>
 
                                             </ul>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link mobileanchor" href="#">Pages
+                                        <li style=" padding: 0px 0px;" class="mobile-navbar-li"><a tabindex="-1" aria-haspopup="true" class="mobileanchor thirdanchor" href="#">Pages
                                             <span class="mobilenav-arrow">+</span>
                                         </a>
-                                            <ul>
-                                                <li><a href="login.html">Login</a></li>
-                                                <li><a href="cart.html">Card</a></li>
-                                                <li><a href="elements.html">Element</a></li>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="confirmation.html">Confirmation</a></li>
-                                                <li><a href="cart.html">Shopping Cart</a></li>
-                                                <li><a href="checkout.html">Product Checkout</a></li>
+                                            <ul class="mobile-submenu thirdul">
+                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="login.html">Login</a></li>
+                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="cart.html">Card</a></li>
+                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="elements.html">Element</a></li>
+                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="about.html">About</a></li>
+                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="confirmation.html">Confirmation</a></li>
+                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="cart.html">Shopping Cart</a></li>
+                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="checkout.html">Product Checkout</a></li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Contact</a>
+                                        <li style=" padding: 0px 0px;" class="mobile-navbar-li">
+                                            <a tabindex="-1" class="mobile-navbar-a" href="#">Contact</a>
                                         </li>
                                     </ul>
+
                                 </div>
 
 
 
-                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                    <i class="fa fa-bars"></i>
-                                </a>
+
                             </div>
                         </div>
                     </div>
