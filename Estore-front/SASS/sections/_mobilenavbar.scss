@@ -5,7 +5,7 @@
             background-color: #333;
             position: relative;
             #myLinks {
-                height: 0%;
+                height: 100%;
                 clear: both;
                 color: #fff;
                 margin: 0;
@@ -46,7 +46,7 @@
                 font-size: 16px;
                 background: #4c4c4c;
                 padding: 8px;
-                height: 0%;
+                height: 100%;
                 transition: height 0.5s;
                 &::after,
                 &::before {

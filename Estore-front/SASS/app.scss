@@ -3,6 +3,7 @@
 @import "core/all";
 @import "sections/all";
 @import "mediaqueries/all";
+@import "pages/all";
 .nav>li>a:focus,
 .nav>li>a:hover {
     background-color: initial !important;
@@ -27,4 +28,6 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
+    font-family: $poppins !important;
+    overflow-x: hidden;
 }

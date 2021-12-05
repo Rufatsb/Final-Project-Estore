@@ -8,21 +8,3 @@
         }
     }
 }
-
-.sticky {
-    top: 0;
-    width: 100%;
-    left: 0;
-    margin: auto;
-    position: fixed;
-    top: 0;
-    box-shadow: 0 10px 15px rgba(25, 25, 25, 0.10);
-    z-index: 9999;
-    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
-    background: #fff;
-    padding: 0px 170px !important;
-    display: flex !important;
-    align-items: center !important;
-    padding-top: 15px !important;
-    padding-bottom: 0px !important;
-}

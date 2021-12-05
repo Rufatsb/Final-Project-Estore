@@ -41,12 +41,8 @@
     }
 }
 
-// @media only screen and (max-width: 982px) {
-//     #main-navbar .sticky {
-//         display: none !important;
-//     }
-//     .mobile-navbar {
-//         position: fixed !important;
-//         // width: 100%;
-//     }
-// }
+@media only screen and (max-width: 982px) {
+    #main-navbar .sticky {
+        display: none !important;
+    }
+}

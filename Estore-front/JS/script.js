@@ -20,6 +20,13 @@ $(document).ready(function() {
 
 
 
+    $('.slick-slider').slick({
+        autoplay: false,
+        speed: 1000,
+        autoplaySpeed: 4500,
+        // fade: true
+
+    });
 
 });
 
@@ -31,33 +38,29 @@ function myFunction() {
     if (y.style.height == "100%" && x.style.height == "100%") {
         y.style.height = "47px";
         x.style.height = "0%";
-    } else {
+        x.style.transition = "0.4s"
 
+
+    } else {
         y.style.height = "100%";
         x.style.height = "100%";
+        x.style.transition = "0.4s"
+
     }
 }
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() { FixedFunction() };
 
-// Get the navbar
+window.onscroll = function() { FixedFunction() };
 var navbar = document.querySelector(".bottom-header");
 var mobilenavbar = document.querySelector(".mobile-navbar")
-    // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
-var msticky = mobilenavbar.offsetTop;
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+
 function FixedFunction() {
     if (window.scrollY >= sticky) {
         navbar.classList.add("sticky")
-    }
-    // } else if (window.scrollY >= msticky) {
-    //     mobilenavbar.classList.add("msticky")
-    // } 
-    else {
+    } else {
         navbar.classList.remove("sticky");
-        mobilenavbar.classList.remove("msticky");
+
 
     }
 }

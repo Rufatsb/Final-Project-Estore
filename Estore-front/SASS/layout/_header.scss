@@ -38,16 +38,16 @@ header {
     padding-bottom: 0px !important;
 }
 
-// .msticky {
-//     z-index: 9999;
-//     animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
-//     top: 0;
-//     width: 100%;
-//     left: 0;
-//     margin: auto;
-//     // position: fixed;
-//     top: 0;
-//     padding: 0px !important;
-//     padding-top: 15px !important;
-//     padding-bottom: 0px !important;
-// }
+.msticky {
+    z-index: 9999;
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    top: 0;
+    width: 100%;
+    left: 0;
+    margin: auto;
+    position: fixed !important;
+    top: 0;
+    padding: 0px !important;
+    padding-top: 15px !important;
+    padding-bottom: 0px !important;
+}
