@@ -20,13 +20,16 @@ $(document).ready(function() {
 
 
 
-    $('.slick-slider').slick({
+    $('.slider-area').slick({
         autoplay: false,
-        speed: 1000,
-        autoplaySpeed: 4500,
-        // fade: true
+        speed: 800,
+        arrows: false,
+        fade: true,
+        dots: true
 
     });
+
+
 
 });
 
