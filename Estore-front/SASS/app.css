@@ -711,6 +711,173 @@ input {
   padding: 5px 10px;
 }
 
+#category-area {
+  padding-left: 45px;
+  padding-right: 45px;
+  font-family: "Playfair Display", serif;
+}
+
+#category-area .section-title h2 {
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#category-area .category-img {
+  position: relative;
+}
+
+#category-area .category-img img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+#category-area .category-img .category-caption {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 52px;
+}
+
+#category-area .category-img .category-caption p {
+  color: #000000;
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+#category-area .category-img .category-caption h2 {
+  color: #1f1f1f;
+  text-transform: capitalize;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: capitalize;
+  margin-bottom: 13px;
+}
+
+#category-area .category-img .category-caption .best {
+  color: #000000;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  background: #ffce25;
+  padding: 13px 24px;
+  border-radius: 30px;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+}
+
+#category-area .category-img .category-caption .best a {
+  color: #000000;
+}
+
+#category-area .category-img .category-caption .collection {
+  display: block;
+  color: #0071fe;
+  text-transform: capitalize;
+  font-size: 30px;
+  line-height: 1.1;
+  text-transform: capitalize;
+  font-family: "Yellowtail", cursive;
+  font-weight: 600;
+  text-shadow: 0px -3px 0px #fff;
+  margin-top: -8px;
+}
+
+#latest-products .product-btn {
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 80px;
+  padding: 0 11px;
+}
+
+#latest-products .filter-group {
+  margin-bottom: 15px;
+  padding-bottom: 0px;
+  position: relative;
+  border: 0;
+}
+
+#latest-products .filter-group .filter-item {
+  display: inline-block;
+}
+
+#latest-products .filter-group .filter-item .filter-item-btn {
+  padding-bottom: 10px;
+  display: block;
+  color: #8f8f96;
+  text-transform: capitalize;
+  font-size: 16px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding-left: 10px;
+}
+
+#latest-products .filter-group .filter-item .filter-item-btn.active {
+  color: #ff003c;
+}
+
+#latest-products .filter-group::after {
+  clear: both;
+}
+
+#latest-products .section-title h2 {
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#latest-products .single-product .product-img {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#latest-products .single-product .product-img .new-product {
+  position: absolute;
+  top: 25px;
+  left: 23px;
+}
+
+#latest-products .single-product .product-img .new-product span {
+  background: #ff003c;
+  padding: 3px 16px;
+  border-radius: 30px;
+  color: #fff;
+}
+
+#latest-products .single-product h4 a {
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #383838;
+}
+
+#latest-products .single-product .product-caption .product-ratting i {
+  color: #ffbc07;
+  margin-bottom: 14px;
+}
+
+#latest-products .single-product .product-caption .product-ratting i.low-star {
+  color: #d3d3d3;
+}
+
+#latest-products .single-product .product-caption .price ul li {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  padding-right: 13px;
+}
+
+#latest-products .single-product .product-caption .price ul li.discount {
+  color: #ff003c;
+  text-decoration: line-through;
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1600px) {
   #main-navbar .bottom-header {
     padding: 0px 10px !important;
@@ -764,6 +931,18 @@ input {
   .slider-height {
     min-height: 700px !important;
   }
+  .category-area .single-category .category-img .category-caption {
+    right: 13px;
+  }
+  .category-area .single-category .category-img .category-caption h2 {
+    font-size: 26px;
+  }
+  .category-area .single-category .category-img .category-caption .best a {
+    padding: 13px 15px;
+  }
+  .category-area .single-category .category-img .category-caption .collection {
+    font-size: 23px;
+  }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -779,6 +958,14 @@ input {
   .slider-area .hero__caption h1 {
     font-size: 60px !important;
     line-height: 1.2 !important;
+  }
+  .section-padding30 {
+    padding-top: 150px;
+    padding-bottom: 120px;
+  }
+  .category-area {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -797,6 +984,10 @@ input {
     font-size: 50px !important;
     line-height: 1.2 !important;
   }
+  .section-padding30 {
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -814,6 +1005,28 @@ input {
   }
   .slider-area .hero__caption p {
     margin-bottom: 30px !important;
+  }
+  .category-area {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .section-padding30 {
+    padding-top: 60px;
+    padding-bottom: 28px;
+  }
+  .category-area .single-category .category-img .category-caption {
+    right: 13px;
+  }
+  .category-area .single-category .category-img .category-caption h2 {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+  .category-area .single-category .category-img .category-caption .best a {
+    padding: 13px 15px;
+    font-size: 12px;
+  }
+  .category-area .single-category .category-img .category-caption .collection {
+    font-size: 20px;
   }
 }
 
@@ -951,5 +1164,44 @@ body {
   color: #212529;
   font-family: "Poppins", sans-serif !important;
   overflow-x: hidden;
+}
+
+.mb-85 {
+  margin-bottom: 85px;
+}
+
+.section-padding30 {
+  padding-top: 200px;
+  padding-bottom: 170px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.padding-bottom {
+  padding-bottom: 250px;
+}
+
+.single-product {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.filtershow {
+  display: block;
 }
 /*# sourceMappingURL=app.css.map */
