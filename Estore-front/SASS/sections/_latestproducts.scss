@@ -20,9 +20,12 @@
                 border: 0;
                 border-bottom: 2px solid transparent;
                 padding-left: 10px;
-            }
-            .filter-item-btn.active {
-                color: #ff003c;
+                &:hover {
+                    color: #ff003c;
+                }
+                .active {
+                    color: #ff003c !important;
+                }
             }
         }
         &::after {

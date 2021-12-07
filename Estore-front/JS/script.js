@@ -29,30 +29,7 @@ $(document).ready(function() {
 
     });
 
-    // external js: isotope.pkgd.js
 
-    // init Isotope
-    var $grid = $('.filterdiv').isotope({
-        itemSelector: '.single-product',
-        layoutMode: 'fitRows'
-    });
-    // filter functions
-
-    // bind filter button click
-    $('.filters-button-group').on('click', 'button', function() {
-        var filterValue = $(this).attr('data-filter');
-        // use filterFn if matches value
-        filterValue = filterFns[filterValue] || filterValue;
-        $grid.isotope({ filter: filterValue });
-    });
-    // change is-checked class on buttons
-    $('.button-group').each(function(i, buttonGroup) {
-        var $buttonGroup = $(buttonGroup);
-        $buttonGroup.on('click', 'button', function() {
-            $buttonGroup.find('.is-checked').removeClass('is-checked');
-            $(this).addClass('is-checked');
-        });
-    });
 
 
 
@@ -92,4 +69,58 @@ function FixedFunction() {
 
 
     }
+}
+
+filterSelection("all")
+
+function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+    for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+        }
+    }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+    }
+    element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("filter-group");
+var btns = btnContainer.getElementsByClassName("filter-item-btn");
+var active = document.querySelector(".active")
+active.style.color = "#ff003c";
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+        if (!btns[i].classList.contains(".active")) {
+            btns[i].classList.add("active")
+        } else {
+
+        }
+
+    });
 }

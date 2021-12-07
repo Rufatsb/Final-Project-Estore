@@ -818,8 +818,12 @@ input {
   padding-left: 10px;
 }
 
-#latest-products .filter-group .filter-item .filter-item-btn.active {
+#latest-products .filter-group .filter-item .filter-item-btn:hover {
   color: #ff003c;
+}
+
+#latest-products .filter-group .filter-item .filter-item-btn .active {
+  color: #ff003c !important;
 }
 
 #latest-products .filter-group::after {
@@ -967,6 +971,9 @@ input {
     padding-left: 0;
     padding-right: 0;
   }
+  .padding-bottom {
+    padding-bottom: 150px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -987,6 +994,12 @@ input {
   .section-padding30 {
     padding-top: 100px;
     padding-bottom: 70px;
+  }
+  .padding-bottom {
+    padding-bottom: 40px;
+  }
+  .section-tittle h2 {
+    font-size: 37px;
   }
 }
 
@@ -1027,6 +1040,17 @@ input {
   }
   .category-area .single-category .category-img .category-caption .collection {
     font-size: 20px;
+  }
+  .padding-bottom {
+    padding-bottom: 10px;
+  }
+  .latest-product-area .product-btn {
+    border-bottom: none;
+    margin-bottom: 24px;
+    padding: 0 11px;
+  }
+  .latest-product-area #filter-group {
+    float: left;
   }
 }
 
@@ -1144,6 +1168,40 @@ input {
   background-size: cover;
 }
 
+.custom-btn {
+  background: #2577fd !important;
+  text-transform: capitalize !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: 1px !important;
+  line-height: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 27px 44px !important;
+  border-radius: 25px !important;
+  margin: 10px !important;
+  cursor: pointer !important;
+  -webkit-transition: color 0.4s linear !important;
+  transition: color 0.4s linear !important;
+  position: relative !important;
+  z-index: 1 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+}
+
+.filterDiv {
+  display: none;
+  /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
 .nav > li > a:focus,
 .nav > li > a:hover {
   background-color: initial !important;
@@ -1199,9 +1257,5 @@ a {
 
 .mb-60 {
   margin-bottom: 60px;
-}
-
-.filtershow {
-  display: block;
 }
 /*# sourceMappingURL=app.css.map */

@@ -38,6 +38,9 @@
         padding-left: 0;
         padding-right: 0;
     }
+    .padding-bottom {
+        padding-bottom: 150px;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -58,6 +61,12 @@
     .section-padding30 {
         padding-top: 100px;
         padding-bottom: 70px;
+    }
+    .padding-bottom {
+        padding-bottom: 40px;
+    }
+    .section-tittle h2 {
+        font-size: 37px;
     }
 }
 
@@ -99,4 +108,17 @@
     .category-area .single-category .category-img .category-caption .collection {
         font-size: 20px;
     }
+    .padding-bottom {
+        padding-bottom: 10px;
+    }
+    .latest-product-area .product-btn {
+        border-bottom: none;
+        margin-bottom: 24px;
+        padding: 0 11px;
+    }
+    .latest-product-area #filter-group {
+        float: left;
+    }
 }
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {}

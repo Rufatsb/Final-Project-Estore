@@ -4,6 +4,7 @@
 @import "sections/all";
 @import "mediaqueries/all";
 @import "pages/all";
+@import "components/all";
 .nav>li>a:focus,
 .nav>li>a:hover {
     background-color: initial !important;
@@ -65,8 +66,4 @@ a {
 
 .mb-60 {
     margin-bottom: 60px;
-}
-
-.filtershow {
-    display: block;
 }
