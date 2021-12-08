@@ -14,6 +14,12 @@
     .category-area .single-category .category-img .category-caption .collection {
         font-size: 23px;
     }
+    .best-collection-area .best-left-cap h2 {
+        font-size: 33px;
+    }
+    .latest-wrapper .latest-area .latest-man {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -41,6 +47,18 @@
     .padding-bottom {
         padding-bottom: 150px;
     }
+    .best-product-area .best-product-caption h2 {
+        font-size: 45px;
+    }
+    .best-collection-area .best-left-cap h2 {
+        font-size: 33px;
+    }
+    .latest-wrapper .latest-area .latest-caption h2 {
+        font-size: 36px;
+    }
+    .latest-wrapper .latest-area .latest-man {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -67,6 +85,42 @@
     }
     .section-tittle h2 {
         font-size: 37px;
+    }
+    .plr-60 {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    .best-product-area .best-product-caption {
+        padding-top: 80px;
+        padding-bottom: 75px;
+    }
+    .best-product-area .best-product-caption h2 {
+        font-size: 45px;
+    }
+    .best-product-area .best-product-caption p {
+        font-size: 17px;
+    }
+    .section-padding2 {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .best-collection-area .best-left-cap h2 {
+        font-size: 33px;
+    }
+    .best-collection-area .best-left-img {
+        padding-top: 30px;
+    }
+    .latest-wrapper .latest-area .latest-caption h2 {
+        font-size: 35px;
+    }
+    .latest-wrapper .latest-area .latest-subscribe form button {
+        padding: 20px 33px;
+    }
+    .latest-wrapper .latest-area .latest-man {
+        display: none;
+    }
+    .gallery-wrapper .gallery-area .gallery-image {
+        width: 50%;
     }
 }
 
@@ -118,6 +172,45 @@
     }
     .latest-product-area #filter-group {
         float: left;
+    }
+    .plr-60 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .best-product-area .best-product-caption {
+        padding-top: 80px;
+        padding-bottom: 75px;
+    }
+    .best-product-area .best-product-caption h2 {
+        font-size: 21px;
+    }
+    .best-product-area .best-product-caption p {
+        font-size: 17px;
+    }
+    .section-padding2 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .best-collection-area .best-left-cap h2 {
+        font-size: 33px;
+    }
+    .best-collection-area .best-left-img {
+        padding-top: 30px;
+    }
+    .latest-wrapper .latest-area .latest-caption h2 {
+        font-size: 27px;
+    }
+    .latest-wrapper .latest-area .latest-subscribe form input {
+        padding: 10px 17px;
+    }
+    .latest-wrapper .latest-area .latest-subscribe form button {
+        padding: 20px 14px;
+    }
+    .latest-wrapper .latest-area .latest-man {
+        display: none;
+    }
+    .gallery-wrapper .gallery-area .gallery-image {
+        width: 50%;
     }
 }
 
