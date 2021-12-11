@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     let firstul = $(".firstul")
     let firstanchor = $(".firstanchor")
     let secondul = $(".secondul")
@@ -8,13 +7,13 @@ $(document).ready(function() {
     let thirdanchor = $(".thirdanchor")
 
 
-    firstanchor.click(function togglefunction() {
+    firstanchor.on("click", function togglefunction() {
         firstul.toggle();
     });
-    secondanchor.click(function togglefunction() {
+    secondanchor.on("click", function togglefunction() {
         secondul.toggle();
     });
-    thirdanchor.click(function togglefunction() {
+    thirdanchor.on("click", function togglefunction() {
         thirdul.toggle();
     });
 
@@ -28,6 +27,68 @@ $(document).ready(function() {
         dots: true
 
     });
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        center: true,
+        items: 1,
+        margin: 0,
+        autoplay: true,
+        nav: true,
+        dots: false,
+        autoplayTimeout: 3000,
+        smartSpeed: 450,
+
+    });
+
+
+    let owlnext = $(".owl-next span");
+    let owlprev = $(".owl-prev span");
+
+    function addicon() {
+
+
+        owlnext.replaceWith("<i></i>")
+        owlprev.replaceWith("<i></i>")
+        let nexticon = $(".owl-next i")
+        let previcon = $(".owl-prev i")
+        nexticon.addClass("fas").addClass("fa-chevron-right")
+        previcon.addClass("fas").addClass("fa-chevron-left")
+
+    }
+    addicon()
+
+
+    let categorylist = $(".category-list")
+    let categorylistitem = $(".category-list-items")
+    let categorylisticon = $(".category-list i")
+    let pricelist = $(".price-list")
+    let pricelistitem = $(".price-list-items")
+    let pricelisticon = $(".price-list i")
+
+    function rotatefunction() {
+        if (categorylisticon.hasClass("fa-caret-down")) {
+            categorylisticon.removeClass("fa-caret-down").addClass("fa-caret-up")
+        } else if (pricelisticon.hasClass("fa-caret-down")) {
+            pricelisticon.removeClass("fa-caret-down").addClass("fa-caret-up")
+        } else {
+            categorylisticon.removeClass("fa-caret-up").addClass("fa-caret-down");
+            pricelisticon.removeClass("fa-caret-up").addClass("fa-caret-down");
+
+
+        }
+    }
+    categorylist.click(function togglefunction() {
+        categorylistitem.slideToggle();
+        rotatefunction();
+
+    });
+
+    pricelist.click(function togglefunction() {
+        pricelistitem.slideToggle();
+        rotatefunction();
+
+
+    });
 
 
 
@@ -35,7 +96,6 @@ $(document).ready(function() {
 
 
 });
-
 
 
 function myFunction() {

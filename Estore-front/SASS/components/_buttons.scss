@@ -67,3 +67,13 @@
     overflow: hidden !important;
     margin: 0 !important;
 }
+
+.load-more {
+    padding: 20px 30px;
+    background-color: transparent;
+    color: #2577fd;
+    text-transform: uppercase;
+    border: 1px solid #2577fd;
+    border-radius: 5%;
+    transition: 0.4s ease-in-out;
+}

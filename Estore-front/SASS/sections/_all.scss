@@ -9,6 +9,10 @@
 @import"shopmethodarea";
 @import"galleryarea";
 @import"bannerarea";
+@import"productlist";
+@import"testomonial";
+@import"subscribe";
+@import"productdetails";
 .mb-85 {
     margin-bottom: 85px;
 }
@@ -62,4 +66,21 @@ a {
     h2 {
         font-family: $play-fair !important;
     }
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    color: #506172;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+h3 {
+    font-family: "Playfair Display", serif;
+    color: #0b1c39;
+    margin-top: 0px;
+    font-style: normal;
+    font-weight: 500;
 }
