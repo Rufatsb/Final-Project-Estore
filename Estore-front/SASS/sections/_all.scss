@@ -13,6 +13,7 @@
 @import"testomonial";
 @import"subscribe";
 @import"productdetails";
+@import"blogarea";
 .mb-85 {
     margin-bottom: 85px;
 }
@@ -83,4 +84,11 @@ h3 {
     margin-top: 0px;
     font-style: normal;
     font-weight: 500;
+}
+
+.float-start,
+.float-end {
+    &::after {
+        clear: both !important;
+    }
 }
