@@ -92,6 +92,23 @@ $(document).ready(function() {
 
 
 
+    let iframee = $("#existing-iframe-example")
+
+    $(".about-play").on("click", function togglefunction() {
+        $(".youtube-video").toggle();
+        $("#overlay").toggle();
+        $("#overlay").on("click", function closefunction() {
+            $(".youtube-video").hide();
+            $("#overlay").hide();
+
+
+
+
+        });
+
+
+    });
+
 
 
 
