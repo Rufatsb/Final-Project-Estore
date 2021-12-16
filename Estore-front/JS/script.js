@@ -109,11 +109,12 @@ $(document).ready(function() {
 
     });
 
+    // $(".payment-item .check").on("click", function checkedfunction() {
 
+    //     $(".radio-btn .check").checked = true;
 
-
+    // });
 });
-
 
 function myFunction() {
     var x = document.getElementById("myLinks");
