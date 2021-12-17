@@ -40,7 +40,7 @@
                 margin-bottom: 0;
                 a {
                     color: #2577fd;
-                    text-decoration: underline;
+                    text-decoration: underline !important;
                 }
             }
         }
@@ -51,59 +51,34 @@
             display: block;
             height: 40px;
             border-radius: 3px;
-            padding: 0 15px;
-            border: 1px solid #eee;
+            padding: 0px 15px;
+            border: 1px solid #eeeeee;
             outline: none;
             box-shadow: none;
             margin-top: 20px;
             margin-bottom: 20px;
         }
-    }
-    .userlogin {
-        display: inline-block;
-        position: relative;
-        input {
+        .apply-btn {
             border: 1px solid #eeeeee;
-            height: 40px;
-            border-radius: 3px;
-            font-size: 14px;
+            display: inline-block;
+            line-height: 38px;
+            padding: 0px 40px;
+            color: #0e6970;
+            text-transform: capitalize;
             font-family: $play-fair;
-            color: #828bb2;
-            font-weight: normal;
+            font-weight: 700;
+            border-radius: 50px;
+            margin-left: 30px;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
         }
     }
-    .placeholder {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 30px;
-        z-index: 1;
-        // color: #212529;
-        opacity: 1;
-        font-size: 20px;
-        &::before {
-            content: attr(data-placeholder);
-            color: rgb(255, 255, 255);
-        }
-        &::after {
-            content: " *";
-            color: #ff6347;
-        }
-    }
-    input:focus+.placeholder {
-        display: none;
+    .userlogin-form {
+        max-width: 710px;
+        margin-left: 15px;
     }
     .form-group {
-        input {
-            border: 1px solid #eee;
-            height: 40px;
-            border-radius: 3px;
-            font-size: 14px;
-            font-family: "Playfair Display", serif;
-            color: #828bb2;
-            font-weight: normal;
-            padding: 6px;
-        }
+        input {}
         textarea {
             height: 100%;
         }
@@ -112,7 +87,6 @@
         display: inline-block;
         margin-left: 15px;
         input {
-            height: auto;
             margin-right: 10px;
         }
         label {
@@ -235,20 +209,7 @@
             padding: 20px;
             font-size: 14px;
         }
-        .check {
-            display: block;
-            position: absolute;
-            border: 1px solid #cdcdcd;
-            border-radius: 100%;
-            height: 14px;
-            width: 14px;
-            top: 5px;
-            left: 0px;
-            background: #fff;
-            z-index: 5;
-            transition: border 0.25s linear;
-            -webkit-transition: border 0.25s linear;
-        }
+        .check {}
     }
     .create-acount {
         a {
@@ -260,11 +221,31 @@
     }
     .create-account {
         input {
-            padding: 10px !important;
-            background-color: #dddddd;
              ::selection {
                 color: blue;
             }
         }
+    }
+    .userlogin {
+        display: inline-block;
+        input {
+            border: 1px solid #eeeeee;
+            height: 40px;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: $play-fair;
+            color: #828bb2;
+            font-weight: normal;
+            position: relative;
+        }
+        .user-star {
+            color: tomato;
+            position: absolute;
+            top: 10%;
+            left: 44%;
+        }
+    }
+    input:focus+.user-star {
+        display: none;
     }
 }
