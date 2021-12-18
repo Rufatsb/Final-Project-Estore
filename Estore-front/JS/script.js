@@ -122,16 +122,18 @@ $(document).ready(function() {
 function myFunction() {
     var x = document.getElementById("myLinks");
     var y = document.querySelector(".mobile-navbar-menu")
-    if (y.style.height == "100%" && x.style.height == "100%") {
-        y.style.height = "47px";
+    if (y.style.height == "100%" && x.style.height == "100%" && x.style.display == "none") {
+        y.style.height = "0%";
         x.style.height = "0%";
         x.style.transition = "0.4s"
+        x.style.display = "block"
 
 
     } else {
         y.style.height = "100%";
         x.style.height = "100%";
         x.style.transition = "0.4s"
+        x.style.display = "none"
 
     }
 }

@@ -625,6 +625,7 @@ input {
   font-size: .875em;
   -webkit-transition: 1s;
   transition: 1s;
+  display: none;
 }
 
 .bottom-header .col-12 .mobile-navbar #myLinks .mobile-submenu {
