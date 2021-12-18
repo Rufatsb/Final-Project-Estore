@@ -2759,6 +2759,112 @@ input {
   display: none;
 }
 
+.card-area {
+  padding: 200px 0;
+}
+
+.card-area .table-responsive {
+  display: block;
+  width: 100%;
+}
+
+.card-area .table-responsive table {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-area .table-responsive table thead tr th {
+  border-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  color: #828bb2;
+  border-bottom: 0 !important;
+}
+
+.card-area .table-responsive table tbody tr td {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  vertical-align: middle;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.card-area .table-responsive table tbody tr td .media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  padding: 0;
+}
+
+.card-area .table-responsive table tbody tr td .media .d-flex {
+  padding-right: 30px;
+}
+
+.card-area .table-responsive table tbody tr td .media .d-flex img {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  max-width: 150px;
+}
+
+.card-area .table-responsive table tbody tr td .media .media-body {
+  vertical-align: middle;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 500px;
+  padding: 0;
+}
+
+.card-area .table-responsive table tbody tr td .media .media-body p {
+  margin-bottom: 0;
+}
+
+.card-area .table-responsive table tbody tr td .product-count {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+
+.card-area .table-responsive table tbody tr td .product-count input {
+  width: 100px;
+  padding-left: 30px;
+  height: 50px;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+
+.card-area .table-responsive table tbody tr td .product-count .input-number-decrement {
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+  padding: 10px;
+  border-left: 1px solid #ddd;
+  display: inline-block;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.card-area .table-responsive table tbody tr td .product-count .input-number-increment {
+  position: absolute;
+  right: 0;
+  top: -7px;
+  padding: 10px;
+  border-left: 1px solid #ddd;
+  display: inline-block;
+  cursor: pointer;
+}
+
 .mb-85 {
   margin-bottom: 85px;
 }
