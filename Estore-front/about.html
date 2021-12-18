@@ -18,6 +18,8 @@
 </head>
 
 <body>
+
+    <button class="animate__animated animate__bounce" onclick="topFunction()" id="topscrollbtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
     <!-- Header starts -->
     <header>
         <section id="main-navbar">
@@ -545,7 +547,15 @@
             });
         };
     </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script>
+        //paste this code under the head tag or in a separate js file.
+        // Wait for window load
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".loader").fadeOut("slow");;
+        });
+    </script>
 </body>
 
 </html>
