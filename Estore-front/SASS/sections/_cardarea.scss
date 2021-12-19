@@ -1,11 +1,16 @@
 .card-area {
     padding: 200px 0;
+    // overflow-x: hidden !important;
     .table-responsive {
         display: block;
         width: 100%;
+        // overflow-x: hidden !important;
         table {
             margin-bottom: 30px;
             border-bottom: 1px solid #ddd;
+            td {
+                max-width: 100% !important;
+            }
             thead {
                 tr {
                     th {
@@ -25,7 +30,6 @@
                         padding-bottom: 30px;
                         vertical-align: middle;
                         align-self: center;
-                        vertical-align: top;
                         border-top: 1px solid #dee2e6;
                         .media {
                             display: flex;
@@ -55,7 +59,7 @@
                             display: inline-block;
                             position: relative;
                             margin-bottom: 0px;
-                            overflow: hidden;
+                            // overflow: hidden;
                             input {
                                 width: 100px;
                                 padding-left: 30px;
@@ -87,8 +91,14 @@
                         }
                     }
                 }
+                tr.shipping-area .shipping-box {}
             }
             .bottom-button {}
+        }
+    }
+    .cupon-text {
+        &::after {
+            clear: both;
         }
     }
 }

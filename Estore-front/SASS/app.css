@@ -2628,11 +2628,6 @@ input {
   letter-spacing: 1px;
 }
 
-.checkout-area .userlogin-form {
-  max-width: 710px;
-  margin-left: 15px;
-}
-
 .checkout-area .form-group textarea {
   height: 100%;
 }
@@ -2786,11 +2781,11 @@ input {
   margin-top: 15px !important;
 }
 
-.checkout-area .create-account input ::-moz-selection {
+.checkout-area .create-account input::-moz-selection {
   color: blue;
 }
 
-.checkout-area .create-account input ::selection {
+.checkout-area .create-account input::selection {
   color: blue;
 }
 
@@ -2834,6 +2829,10 @@ input {
   border-bottom: 1px solid #ddd;
 }
 
+.card-area .table-responsive table td {
+  max-width: 100% !important;
+}
+
 .card-area .table-responsive table thead tr th {
   border-top: 0;
   font-size: 14px;
@@ -2850,7 +2849,6 @@ input {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  vertical-align: top;
   border-top: 1px solid #dee2e6;
 }
 
@@ -2891,7 +2889,6 @@ input {
   display: inline-block;
   position: relative;
   margin-bottom: 0px;
-  overflow: hidden;
 }
 
 .card-area .table-responsive table tbody tr td .product-count input {
@@ -2924,6 +2921,244 @@ input {
   border-left: 1px solid #ddd;
   display: inline-block;
   cursor: pointer;
+}
+
+.card-area .cupon-text::after {
+  clear: both;
+}
+
+.card-area {
+  padding: 200px 0;
+}
+
+.card-area .table-responsive {
+  display: block;
+  width: 100%;
+}
+
+.card-area .table-responsive table {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-area .table-responsive table td {
+  max-width: 100% !important;
+}
+
+.card-area .table-responsive table thead tr th {
+  border-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  color: #828bb2;
+  border-bottom: 0 !important;
+}
+
+.card-area .table-responsive table tbody tr td {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  vertical-align: middle;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-top: 1px solid #dee2e6;
+}
+
+.card-area .table-responsive table tbody tr td .media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  padding: 0;
+}
+
+.card-area .table-responsive table tbody tr td .media .d-flex {
+  padding-right: 30px;
+}
+
+.card-area .table-responsive table tbody tr td .media .d-flex img {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  max-width: 150px;
+}
+
+.card-area .table-responsive table tbody tr td .media .media-body {
+  vertical-align: middle;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 500px;
+  padding: 0;
+}
+
+.card-area .table-responsive table tbody tr td .media .media-body p {
+  margin-bottom: 0;
+}
+
+.card-area .table-responsive table tbody tr td .product-count {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.card-area .table-responsive table tbody tr td .product-count input {
+  width: 100px;
+  padding-left: 30px;
+  height: 50px;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+
+.card-area .table-responsive table tbody tr td .product-count .input-number-decrement {
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+  padding: 10px;
+  border-left: 1px solid #ddd;
+  display: inline-block;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.card-area .table-responsive table tbody tr td .product-count .input-number-increment {
+  position: absolute;
+  right: 0;
+  top: -7px;
+  padding: 10px;
+  border-left: 1px solid #ddd;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card-area .cupon-text::after {
+  clear: both;
+}
+
+.login-area {
+  padding: 200px 0px;
+}
+
+.login-area .login-area-text {
+  background-image: -webkit-gradient(linear, left top, right top, from(#B08EAD), color-stop(64%, #4B3049), to(#B08EAD));
+  background-image: linear-gradient(90deg, #B08EAD 0%, #4B3049 64%, #B08EAD 100%);
+  background-size: 200% auto;
+  padding: 80px 70px;
+  height: 600px;
+  display: table;
+}
+
+.login-area .login-area-text .login-area-text-div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.login-area .login-area-text .login-area-text-div h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35px;
+  color: #fff;
+  margin-bottom: 17px;
+}
+
+.login-area .login-area-text .login-area-text-div p {
+  color: #fff;
+  line-height: 25px;
+}
+
+.login-area .login-area-text .login-area-text-div .login-area-btn {
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-size: 14px;
+  margin-top: 28px;
+  color: #fff !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: inline-block;
+  padding: 18px 36px;
+  border-radius: 5px;
+}
+
+.login-area .login-area-text .login-area-text-div .login-area-btn:hover {
+  background-color: #fff;
+  color: blue !important;
+}
+
+.login-area .login-area-login {
+  padding: 80px 70px;
+  height: 600px;
+  display: table;
+}
+
+.login-area .login-area-login .login-area-items-div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.login-area .login-area-login .login-area-items-div h3 {
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-bottom: 80px;
+  font-family: "Playfair Display", serif;
+  color: #0b1c39;
+  margin-top: 0px;
+  font-style: normal;
+}
+
+.login-area .login-area-login .login-area-items-div .userlogin-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.login-area .login-area-login .login-area-items-div .userlogin-form .userlogin {
+  display: inline-block;
+  position: relative;
+}
+
+.login-area .login-area-login .login-area-items-div .userlogin-form .userlogin input {
+  border: 1px solid #eeeeee;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-family: "Playfair Display", serif;
+  color: #828bb2;
+  font-weight: normal;
+  position: relative;
+}
+
+.login-area .login-area-login .login-area-items-div .userlogin-form .create-account {
+  display: inline-block;
+  margin-top: 11px;
+}
+
+.login-area .login-area-login .login-area-items-div .userlogin-form .create-account input {
+  padding: 0;
+}
+
+.login-area .login-area-login .login-area-items-div .userlogin-form .create-account input::-moz-selection {
+  color: blue;
+}
+
+.login-area .login-area-login .login-area-items-div .userlogin-form .create-account input::selection {
+  color: blue;
+}
+
+.login-area .login-area-login .login-area-items-div .userlogin-form .create-account label {
+  color: #777777;
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-left: 10px;
+  font-weight: 500 !important;
+}
+
+.login-area .login-area-login .login-area-items-div .userlogin-form input:focus + .user-star {
+  display: none;
 }
 
 .mb-85 {
@@ -2999,6 +3234,12 @@ h3 {
 .float-start::after,
 .float-end::after {
   clear: both !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1600px) {
@@ -3317,6 +3558,63 @@ h3 {
   }
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .card-area {
+    padding: 100px 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-area .media {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .card-area {
+    padding: 70px 0px;
+  }
+}
+
+@media (max-width: 1416px) {
+  .card-area .media-body {
+    width: 300px !important;
+  }
+  .card-area .media-body p {
+    font-size: 14px;
+  }
+  .card-area .emptytd {
+    display: none !important;
+  }
+  .shipping-area {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (max-width: 991px) {
+  .login-area {
+    padding: 70px 0px;
+  }
+  .login-area .login-area-login .login-area-items-div h3 {
+    margin-bottom: 20px;
+  }
+  .login_part .login_part_form {
+    padding: 0;
+  }
+  .login-area .login-area-login {
+    padding: 30px;
+    height: 400px;
+  }
+}
+
 .custom-btn {
   background: #2577fd !important;
   text-transform: capitalize !important;
@@ -3402,6 +3700,29 @@ h3 {
   border-radius: 5%;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
+}
+
+.login-area-btn {
+  display: block;
+  width: 100%;
+  margin: 30px 0 17px;
+  padding: 18px 50px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #2577fd;
+  font-size: 15px;
+  color: #2577fd;
+  text-transform: uppercase;
+  font-weight: 400;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.forgetpassword {
+  color: #777777;
+  text-align: right;
+  float: right;
+  text-transform: capitalize;
 }
 
 .slider-area {
@@ -3579,6 +3900,29 @@ h3 {
   border-radius: 5%;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
+}
+
+.login-area-btn {
+  display: block;
+  width: 100%;
+  margin: 30px 0 17px;
+  padding: 18px 50px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #2577fd;
+  font-size: 15px;
+  color: #2577fd;
+  text-transform: uppercase;
+  font-weight: 400;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.forgetpassword {
+  color: #777777;
+  text-align: right;
+  float: right;
+  text-transform: capitalize;
 }
 
 .filterDiv {

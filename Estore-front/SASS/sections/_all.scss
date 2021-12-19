@@ -21,6 +21,8 @@
 @import"confirmationarea";
 @import"checkoutarea";
 @import"cardarea";
+@import"cardarea";
+@import"loginarea";
 .mb-85 {
     margin-bottom: 85px;
 }
@@ -98,4 +100,10 @@ h3 {
     &::after {
         clear: both !important;
     }
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }

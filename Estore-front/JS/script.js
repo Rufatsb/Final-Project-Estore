@@ -146,6 +146,8 @@ window.onscroll = function() {
 var navbar = document.querySelector(".bottom-header");
 var mobilenavbar = document.querySelector(".mobile-navbar")
 var sticky = navbar.offsetTop;
+var msticky = mobilenavbar.offsetTop;
+
 
 function FixedFunction() {
     if (window.scrollY >= sticky) {

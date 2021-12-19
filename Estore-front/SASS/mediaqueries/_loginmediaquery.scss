@@ -10,4 +10,18 @@
 
 @media (min-width:768px) {}
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+    .login-area {
+        padding: 70px 0px;
+    }
+    .login-area .login-area-login .login-area-items-div h3 {
+        margin-bottom: 20px;
+    }
+    .login_part .login_part_form {
+        padding: 0;
+    }
+    .login-area .login-area-login {
+        padding: 30px;
+        height: 400px;
+    }
+}

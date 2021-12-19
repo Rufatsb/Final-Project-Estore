@@ -73,10 +73,6 @@
             letter-spacing: 1px;
         }
     }
-    .userlogin-form {
-        max-width: 710px;
-        margin-left: 15px;
-    }
     .form-group {
         input {}
         textarea {
@@ -221,7 +217,7 @@
     }
     .create-account {
         input {
-             ::selection {
+            &::selection {
                 color: blue;
             }
         }
