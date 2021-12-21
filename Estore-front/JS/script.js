@@ -226,7 +226,11 @@ var active = document.querySelector(".active")
 active.style.color = "#ff003c";
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
-        btns[i].classList.toggle('active');
+        if (!btns[i].classList.contains(".active")) {
+            btns[i].classList.add("active")
+        } else {
+
+        }
 
     });
 }
