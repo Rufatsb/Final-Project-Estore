@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+  @await Component.InvokeAsync("Banner",new { Title = "About" })
+
+   <!-- About area starts -->
+
+    <section class="about-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="about-text text-left">
+                        <h5>Our Mission</h5>
+                        <h3>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.</h3>
+                    </div>
+                    <div class="about-modal">
+                        <img class="img-fluid" src="images/aboutmodal.webp" alt="">
+                        <a class="about-play" href="javascript:void(0);"></a>
+
+
+                    </div>
+                    <div class="youtube-video">
+                        <iframe id="existing-iframe-example" width="640px" height="640px" src="https://www.youtube.com/embed/DWHB6nTyKDI" frameborder="0" style="border: solid 4px #37474F"></iframe>
+                    </div>
+                    <div id="overlay"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- About area ends -->
+    <!-- Shop-information-section starts -->
+
+    <section class="shop-information-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-6">
+                    <div class="shop-information-title">
+                        <h3>Credibly innovate granular internal or organic sources whereas standards.</h3>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="shop-information-content">
+                        <p>Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources. Credibly innovate granular internal or “organic” sources whereas high standards in web-readiness.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-shop-information">
+                        <img src="images/shopinformation1.svg" alt="#">
+                        <h4>Credit Card Support</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-shop-information">
+                        <img src="images/shopinformation2.svg" alt="#">
+                        <h4>Online Order</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-shop-information">
+                        <img src="images/shopinformation3.svg" alt="#">
+                        <h4>Free Delivery</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-shop-information">
+                        <img src="images/shopinformation4.svg" alt="#">
+                        <h4>Product with Gift</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop-information-section ends -->
+    <!-- Testimonial slider starts -->
+    <section class="testimonial-slider">
+
+        <div class="container">
+            <div class="row justify-content-center align-items-center pt-5">
+                <div class="col-lg-8">
+                    <div class="owl-carousel">
+
+                        <div class="item">
+                            <div class="testimonial-img">
+                                <img class="img-circle" src="images/testimonial1.webp" alt="">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
+
+
+                            <div class="testimonial-name">
+                                <h5>- Justin Clifford</h5>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial-img">
+                                <img class="img-circle" src="images/testimonial2.webp" alt="">
+                                <i class="fas fa-file-alt"></i>
+
+                            </div>
+
+                            <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
+
+                            <div class="testimonial-name">
+                                <h5>- Edwin Schmaizer</h5>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="testimonial-img">
+                                <img class="img-circle" src="images/testimonial3.webp" alt="">
+                                <i class="fas fa-file-alt"></i>
+
+                            </div>
+
+                            <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
+
+                            <div class="testimonial-name">
+                                <h5>- Crispy Dankovic</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Testomonial slider ends -->
+    <!-- Subscribe area starts -->
+    <section class="subscribe">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="subscribe-text-area">
+                        <h2>Get promotions &amp; updates!</h2>
+                        <p>Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources credibly innovate granular internal .</p>
+                        <div class="subscribe-form">
+                            <input type="email" placeholder="Enter your mail">
+                            <a href="#" class="btn">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Subscribe area ends -->

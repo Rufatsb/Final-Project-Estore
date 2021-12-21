@@ -1,0 +1,263 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+  @await Component.InvokeAsync("Banner",new { Title = "Category" })
+
+   <!-- Latest products area starts -->
+    <section id="latest-products" class="category-filter-pading">
+        <div class="container">
+            <div class="row product-btn d-flex justify-content-start align-items-start">
+                <div class="col-xl-8 col-lg-7 col-md-7">
+                    <ul id="filter-group" class="filter-group float-start">
+                        <li class="filter-item"><a class="filter-item-btn active" onclick="filterSelection('all')" href="javascript:void(0);">All</a></li>
+                        <li class="filter-item"><a class="filter-item-btn" onclick="filterSelection('new')" href="javascript:void(0);">New</a></li>
+                        <li class="filter-item"><a class="filter-item-btn" onclick="filterSelection('featured')" href="javascript:void(0);">Featured</a> </li>
+                        <li class="filter-item"><a class="filter-item-btn" onclick="filterSelection('offer')" href="javascript:void(0);">Offer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+
+
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new offer">
+
+                    <div class="single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter1.webp" alt="">
+                            <div class="new-product">
+                                <span>New</span>
+                            </div>
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Shorts</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$10.00</li>
+                                    <li class="discount">$20.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv featured">
+                    <div class="single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter2.webp" alt="">
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Green sweater</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$20.00</li>
+                                    <li class="discount">$40.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new offer">
+                    <div class="single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter3.webp" alt="">
+                            <div class="new-product">
+                                <span>New</span>
+                            </div>
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Yellow sweater</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$25.00</li>
+                                    <li class="discount">$50.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv featured offer">
+                    <div class="single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter4.webp" alt="">
+
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Gray shirt</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$10.00</li>
+                                    <li class="discount">$25.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv offer">
+                    <div class=" single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter5.webp" alt="">
+
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Sweatpants</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$20.00</li>
+                                    <li class="discount">$30.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new featured">
+                    <div class="single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter6.webp" alt="">
+                            <div class="new-product">
+                                <span>New</span>
+                            </div>
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Jeans jacket</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$60.00</li>
+                                    <li class="discount">$100.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </section>
+    <!-- Latest products area ends -->
+    <!-- Latest subscribe area starts -->
+    <section class="latest-wrapper plr-60">
+        <div class="latest-area latest-height d-flex align-items-center" style="background-image: url(&quot;images/latest1.webp&quot;);">
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-xl-5 col-lg-5 col-md-6 offset-xl-1 offset-lg-1">
+                        <div class="latest-caption">
+                            <h2>Get Our<br>Latest Offers News</h2>
+                            <p>Subscribe news latter</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-6 ">
+                        <div class="latest-subscribe">
+                            <form action="javascript:void(0);">
+                                <input type="email" placeholder="Your email here">
+                                <button>Shop Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="latest-man">
+                <img src="images/latest2.webp" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Latest subscribe area ends -->
+    <!-- Shop method area starts -->
+
+    <!-- Shop method area ends -->
+    <section class="shop-method-area section-padding30">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="shopping-method mb-40">
+                        <i class="fab fa-dropbox"></i>
+                        <h6>Free Shipping Method</h6>
+                        <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="shopping-method mb-40">
+                        <i class="fas fa-unlock"></i>
+                        <h6>Secure Payment System</h6>
+                        <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="shopping-method mb-40">
+                        <i class="fas fa-sync"></i>
+                        <h6>Secure Payment System</h6>
+                        <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery area starts -->
+    <section class="gallery-wrapper plr-60">
+        <div class="gallery-area">
+            <div class="container-fluid">
+                <div class="row justify-content-between">
+                    <div class="gallery-image">
+                        <img src="images/gallery.webp" alt="">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="images/gallery1.webp" alt="">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="images/gallery2.webp" alt="">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="images/gallery3.webp" alt="">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="images/gallery4.webp" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Gallery area ends -->
