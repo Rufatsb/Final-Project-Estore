@@ -26,8 +26,15 @@ using Estore.ViewModels.AboutViewModel;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\Views\_ViewImports.cshtml"
+using Estore.ViewModels.ProductViewModel;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a3c173920fb171eae409afe2fa0748c51b6c586c", @"/Views/Shared/Components/Banner/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"80973eb687e5549e0c4b3bff71cb54bf1676e03f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ea771ba66532a6b95f34b40883d5a0982c970837", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_Banner_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Banner>
     {
         #pragma warning disable 1998

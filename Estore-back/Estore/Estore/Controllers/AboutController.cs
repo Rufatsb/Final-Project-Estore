@@ -22,7 +22,10 @@ namespace Estore.Controllers
                  new AboutVM
                  {
                      AboutText = await _context.AboutTexts.Include(a => a.AboutVideo).FirstOrDefaultAsync(),
-                     AboutShopInfo = await _context.AboutShopInfos.Include(a => a.Items).FirstOrDefaultAsync()
+                     AboutShopInfo = await _context.AboutShopInfos.Include(a => a.Items).FirstOrDefaultAsync(),
+                     Subscribe = await _context.Subscribes.FirstOrDefaultAsync(),
+
+
 
                  }
 

@@ -26,8 +26,15 @@ using Estore.ViewModels.AboutViewModel;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\Views\_ViewImports.cshtml"
+using Estore.ViewModels.ProductViewModel;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c5f66ec8b3c08b89877c3e806eb16237a5f19aaa", @"/Views/Contact/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"80973eb687e5549e0c4b3bff71cb54bf1676e03f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ea771ba66532a6b95f34b40883d5a0982c970837", @"/Views/_ViewImports.cshtml")]
     public class Views_Contact_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("contact-form"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -91,7 +98,7 @@ Write(await Component.InvokeAsync("Banner",new { Title = "Contact Us" }));
                 </div>
                 <div class=""col-lg-8"">
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c5f66ec8b3c08b89877c3e806eb16237a5f19aaa5664", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c5f66ec8b3c08b89877c3e806eb16237a5f19aaa5881", async() => {
                 WriteLiteral(@"
                         <div class=""row"">
                             <div class=""col-12"">

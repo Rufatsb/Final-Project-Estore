@@ -1,5 +1,7 @@
 ﻿using Estore.DAL;
+using Estore.ViewModels.ProductViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace Estore.Controllers
@@ -15,7 +17,16 @@ namespace Estore.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View();
+            return View(
+                  new ProductVM
+                  {
+
+                      Subscribe = await _context.Subscribes.FirstOrDefaultAsync()
+
+
+
+                  }
+                );
         }
 
         public async Task<IActionResult> Productdetails()

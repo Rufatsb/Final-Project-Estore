@@ -18,6 +18,8 @@ namespace Estore.DAL
         public virtual DbSet<AboutVideo> AboutVideos { get; set; }
         public virtual DbSet<AboutShopInfo> AboutShopInfos { get; set; }
         public virtual DbSet<AboutShopItem> AboutShopItems { get; set; }
+        public virtual DbSet<Subscribe> Subscribes { get; set; }
+
 
 
 

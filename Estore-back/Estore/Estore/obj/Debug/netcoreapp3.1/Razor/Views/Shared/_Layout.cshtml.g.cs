@@ -26,8 +26,15 @@ using Estore.ViewModels.AboutViewModel;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\Views\_ViewImports.cshtml"
+using Estore.ViewModels.ProductViewModel;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d7", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"80973eb687e5549e0c4b3bff71cb54bf1676e03f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ea771ba66532a6b95f34b40883d5a0982c970837", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -83,9 +90,9 @@ using Estore.ViewModels.AboutViewModel;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d712702", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d712919", async() => {
                 WriteLiteral("\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d713144", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d713361", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -103,7 +110,7 @@ using Estore.ViewModels.AboutViewModel;
     <link href=""https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"" rel=""stylesheet"" integrity=""sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"" crossorigin=""anonymous"">
     <link href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"" rel=""stylesheet"" />
     ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d714659", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d714876", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -119,7 +126,7 @@ using Estore.ViewModels.AboutViewModel;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d715925", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d716142", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -135,7 +142,7 @@ using Estore.ViewModels.AboutViewModel;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d717191", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d717408", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -166,7 +173,7 @@ using Estore.ViewModels.AboutViewModel;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d719425", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d719642", async() => {
                 WriteLiteral(@"
 
 
@@ -240,7 +247,7 @@ using Estore.ViewModels.AboutViewModel;
                             <div class=""logo d-flex justify-content-start"">
 
                                 <a href=""index.html"">");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d723737", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d723954", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -350,7 +357,7 @@ using Estore.ViewModels.AboutViewModel;
                                 <div class=""mobile-navbar-menu"">
 
                                     ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d730534", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d730751", async() => {
                     WriteLiteral(@"<span class=""mobile-nav-menu-txt"">MENU</span><span class=""mobile-nav-icon position-relative""><span style=""top:0%"" class=""mobile-nav-icon-bar position-absolute""></span><span style=""top: 33%;"" class=""mobile-nav-icon-bar position-absolute""></span><span style=""top: 66%;"" class=""mobile-nav-icon-bar position-absolute""></span></span>");
                 }
                 );
@@ -460,8 +467,8 @@ using Estore.ViewModels.AboutViewModel;
                         <div class=""single-footer-div "">
                             <div class=""footer-logo "">
                                 ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d737932", async() => {
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d738153", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d738149", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d738370", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -502,7 +509,7 @@ using Estore.ViewModels.AboutViewModel;
 
                             <ul>
                                 <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d740804", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d741021", async() => {
                     WriteLiteral("About");
                 }
                 );
@@ -517,7 +524,7 @@ using Estore.ViewModels.AboutViewModel;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("</li>\r\n                                <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d741981", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d742198", async() => {
                     WriteLiteral(" Offers &amp; Discounts");
                 }
                 );
@@ -532,7 +539,7 @@ using Estore.ViewModels.AboutViewModel;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("</li>\r\n                                <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d743176", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d743393", async() => {
                     WriteLiteral(" Get Coupon");
                 }
                 );
@@ -547,7 +554,7 @@ using Estore.ViewModels.AboutViewModel;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("</li>\r\n                                <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d744359", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d744576", async() => {
                     WriteLiteral(" Contact Us");
                 }
                 );
@@ -571,7 +578,7 @@ using Estore.ViewModels.AboutViewModel;
                             <h4>New Products</h4>
                             <ul>
                                 <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d745852", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d746069", async() => {
                     WriteLiteral("Woman Cloth");
                 }
                 );
@@ -586,7 +593,7 @@ using Estore.ViewModels.AboutViewModel;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("</li>\r\n                                <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d747035", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d747252", async() => {
                     WriteLiteral("Fashion Accessories");
                 }
                 );
@@ -601,7 +608,7 @@ using Estore.ViewModels.AboutViewModel;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("</li>\r\n                                <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d748226", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d748443", async() => {
                     WriteLiteral(" Man Accessories");
                 }
                 );
@@ -616,7 +623,7 @@ using Estore.ViewModels.AboutViewModel;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("</li>\r\n                                <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d749414", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d749631", async() => {
                     WriteLiteral(" Rubber made Toys");
                 }
                 );
@@ -659,7 +666,7 @@ using Estore.ViewModels.AboutViewModel;
                                 <script>
                                     document.write(new Date().getFullYear());
                                 </script> All rights reserved | This template is made with <i class=""far fa-heart ""></i> by ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d751922", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d752139", async() => {
                     WriteLiteral("Colorlib");
                 }
                 );
@@ -706,7 +713,7 @@ using Estore.ViewModels.AboutViewModel;
                 WriteLiteral(@" integrity=""sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB "" crossorigin=""anonymous ""></script>
     <script src=""https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"" integrity=""sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13 "" crossorigin=""anonymous ""></script>
     ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d755042", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d755259", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -721,7 +728,7 @@ using Estore.ViewModels.AboutViewModel;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d756231", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d756448", async() => {
                     WriteLiteral("\r\n    ");
                 }
                 );
@@ -736,7 +743,7 @@ using Estore.ViewModels.AboutViewModel;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d757379", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edd2fe6f088ad10fb6c4a1bd89022c6bbd0990d757596", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

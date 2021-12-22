@@ -308,3 +308,4 @@ C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\ne
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Estore.dll
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Estore.pdb
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Estore.genruntimeconfig.cache
+C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SubscribePartial.cshtml.g.cs

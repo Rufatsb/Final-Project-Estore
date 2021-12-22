@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20211222020947_SubscribeTableandSomeDataAnnotationsadded.cs" />
+    <Compile Remove="Migrations\20211222020947_SubscribeTableandSomeDataAnnotationsadded.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.22">
@@ -15,6 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ViewModels\BlogViewModel\" />
+    <Folder Include="ViewModels\CategoryViewModel\" />
+    <Folder Include="ViewModels\ContactViewModel\" />
+    <Folder Include="ViewModels\HomeViewModel\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 

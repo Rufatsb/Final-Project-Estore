@@ -26,8 +26,15 @@ using Estore.ViewModels.AboutViewModel;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\Views\_ViewImports.cshtml"
+using Estore.ViewModels.ProductViewModel;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"12caa3309eb31310fcf7f83df0de12efd05a300e", @"/Views/Blog/Blogdetails.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"80973eb687e5549e0c4b3bff71cb54bf1676e03f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ea771ba66532a6b95f34b40883d5a0982c970837", @"/Views/_ViewImports.cshtml")]
     public class Views_Blog_Blogdetails : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("#"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -284,7 +291,7 @@ Write(await Component.InvokeAsync("Banner",new { Title = "Single Blog" }));
                     <div class=""blog-right-container"">
                         <div class=""blog-right-item blog-right-search"">
                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12caa3309eb31310fcf7f83df0de12efd05a300e18592", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12caa3309eb31310fcf7f83df0de12efd05a300e18809", async() => {
                 WriteLiteral(@"
                                 <div class=""form-group"">
                                     <div class=""input-group mb-3"">
@@ -489,7 +496,7 @@ Write(await Component.InvokeAsync("Banner",new { Title = "Single Blog" }));
                                 Subscribe
                             </h4>
                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12caa3309eb31310fcf7f83df0de12efd05a300e29693", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12caa3309eb31310fcf7f83df0de12efd05a300e29910", async() => {
                 WriteLiteral(@"
                                 <div class=""form-group"">
                                     <div class=""input-group mb-3"">
