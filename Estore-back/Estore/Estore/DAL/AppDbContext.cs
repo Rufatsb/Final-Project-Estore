@@ -14,6 +14,12 @@ namespace Estore.DAL
                 
     }
         public virtual DbSet<Banner> Banners { get; set; }
+        public virtual DbSet<AboutText> AboutTexts { get; set; }
+        public virtual DbSet<AboutVideo> AboutVideos { get; set; }
+        public virtual DbSet<AboutShopInfo> AboutShopInfos { get; set; }
+        public virtual DbSet<AboutShopItem> AboutShopItems { get; set; }
+
+
 
 
 

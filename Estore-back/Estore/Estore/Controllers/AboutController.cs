@@ -1,5 +1,7 @@
 ﻿using Estore.DAL;
+using Estore.ViewModels.AboutViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace Estore.Controllers
@@ -15,7 +17,16 @@ namespace Estore.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View();
+
+            return View(
+                 new AboutVM
+                 {
+                     AboutText = await _context.AboutTexts.Include(a => a.AboutVideo).FirstOrDefaultAsync(),
+                     AboutShopInfo = await _context.AboutShopInfos.Include(a => a.Items).FirstOrDefaultAsync()
+
+                 }
+
+                );
         }
     }
 }
