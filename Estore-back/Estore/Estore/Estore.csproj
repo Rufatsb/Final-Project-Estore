@@ -20,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\BlogViewModel\" />
     <Folder Include="ViewModels\CategoryViewModel\" />
     <Folder Include="ViewModels\ContactViewModel\" />
     <Folder Include="ViewModels\HomeViewModel\" />

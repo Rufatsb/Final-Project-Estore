@@ -4,14 +4,16 @@ using Estore.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Estore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211223052623_CreateTables_BlogComments_Blogwriters_Categories_InstagramFeeds_Posts_PostCategories_PostTags_Tags")]
+    partial class CreateTables_BlogComments_Blogwriters_Categories_InstagramFeeds_Posts_PostCategories_PostTags_Tags
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -229,9 +231,6 @@ namespace Estore.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BlogWriterId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -245,8 +244,6 @@ namespace Estore.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BlogWriterId");
 
                     b.ToTable("Posts");
                 });
@@ -382,15 +379,6 @@ namespace Estore.Migrations
                     b.HasOne("Estore.Models.Post", "Post")
                         .WithMany("BlogComments")
                         .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Estore.Models.Post", b =>
-                {
-                    b.HasOne("Estore.Models.BlogWriter", "BlogWriter")
-                        .WithMany("Posts")
-                        .HasForeignKey("BlogWriterId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

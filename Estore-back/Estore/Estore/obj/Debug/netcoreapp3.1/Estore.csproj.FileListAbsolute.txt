@@ -289,7 +289,6 @@ C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\ne
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Estore.TagHelpers.output.cache
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Estore.RazorCoreGenerate.cache
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\About\Index.cshtml.g.cs
-C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Blogdetails.cshtml.g.cs
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs
@@ -309,3 +308,6 @@ C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\ne
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Estore.pdb
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Estore.genruntimeconfig.cache
 C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SubscribePartial.cshtml.g.cs
+C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Blog\Default.cshtml.g.cs
+C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Testimonial\Default.cshtml.g.cs
+C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Blogdetails.cshtml.g.cs

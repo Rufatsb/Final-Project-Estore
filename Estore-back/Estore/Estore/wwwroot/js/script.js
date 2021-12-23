@@ -37,6 +37,7 @@ $(document).ready(function() {
         dots: false,
         autoplayTimeout: 3000,
         smartSpeed: 450,
+        autoplaySpeed:1500
 
     });
 

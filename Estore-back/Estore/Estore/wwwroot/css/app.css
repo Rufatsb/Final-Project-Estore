@@ -1991,6 +1991,20 @@ input {
   border: 1px solid red !important;
 }
 
+.blog-details-area .comment-form  {
+  border-top: 1px solid #eee;
+  padding-top: 45px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.blog-details-area .comment-form h4 {
+  margin-bottom: 40px !important;
+  font-size: 18px !important;
+  line-height: 22px !important;
+  font-family: "Playfair Display", serif !important;
+}
+
 @keyframes fadeInDown {
   0% {
     opacity: 0;
