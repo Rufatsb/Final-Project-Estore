@@ -1,4 +1,4 @@
-﻿
+﻿@model BlogVM
 @{
 }
    <div class="col-lg-4">
@@ -23,27 +23,12 @@
                             <h4>Category</h4>
 
                             <ul>
-                                <li>
-                                    <a href="#">Restaurant food(27)</a></li>
-
-
-                                <li>
-                                    <a href="#">Travel news(18)</a></li>
-
-                                <li>
-                                    <a href="#">Modern Technology(24)</a></li>
-
-
-
-                                <li>
-                                    <a href="#">Product(33)</a></li>
-
-
-                                <li>
-                                    <a href="#">Inspiration(12)</a></li>
-
-                                <li>
-                                    <a href="#">Health Care(21)</a></li>
+                               
+                              @foreach (Category category in Model.Categories)
+                             {
+                              <li><a href="#"> @category.Name</a></li>
+                             }
+                                
 
 
                             </ul>
@@ -52,54 +37,23 @@
                             <h4>
                                 Recent Post
                             </h4>
-                            <div class="blog-post-container">
-                                <div class="recent-post-img">
-                                    <img src="images/recentpost1.webp" alt="" srcset="">
+                            @foreach (Post post in Model.Posts.OrderByDescending(o=>o.Id).Take(4))
+                           {
+                                 <div class="blog-post-container">
+                                <div style="width:46%;height:auto" class="recent-post-img">
+                                    <img  style="width:150px;height:100px" src="~/images/@post.Img" alt="" srcset="">
                                 </div>
-                                <div class="recent-post-text">
-                                    <a href="#">
-                                        <h3>From life was you fish...</h3>
+                                <div class="recent-post-text mt-0">
+                                    <a asp-controller="Blog" asp-action="Blogdetails" asp-route-id="@post.Id">
+                                        <h3>@post.Title.Substring(0,36)...</h3>
                                     </a>
 
-                                    <p>January 12, 2019</p>
+                                    <p>@post.CreatedAt.ToShortDateString()</p>
                                 </div>
                             </div>
-                            <div class="blog-post-container">
-                                <div class="recent-post-img">
-                                    <img src="images/recentpost2.webp" alt="" srcset="">
-                                </div>
-                                <div class="recent-post-text">
-                                    <a href="#">
-                                        <h3>The Amazing Hubble</h3>
-                                    </a>
-
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="blog-post-container">
-                                <div class="recent-post-img">
-                                    <img src="images/recentpost3.webp" alt="" srcset="">
-                                </div>
-                                <div class="recent-post-text">
-                                    <a href="#">
-                                        <h3>Astronomy Or Astrology</h3>
-                                    </a>
-
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="blog-post-container">
-                                <div class="recent-post-img">
-                                    <img src="images/recentpost4.webp" alt="" srcset="">
-                                </div>
-                                <div class="recent-post-text">
-                                    <a href="#">
-                                        <h3>Asteroids telescope</h3>
-                                    </a>
-
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
+                           }
+                          
+                          
 
                         </div>
                         <div class="blog-right-item tag-clouds">
@@ -108,30 +62,14 @@
                                     Tag Clouds
                                 </h4>
                                 <ul>
-                                    <li>
-                                        <a href="#">project</a>
+                                    @foreach (Tags tag in Model.Tags)
+                                   {
+                                         <li>
+                                        <a href="#">@tag.Name</a>
                                     </li>
-                                    <li>
-                                        <a href="#">love</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">technology</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">restaurant</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">life style</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">design</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">illustration</a>
-                                    </li>
+                                   }
+                                  
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -141,24 +79,14 @@
                             </h4>
                             <div class="blog-post-container">
                                 <ul>
-                                    <li>
-                                        <a><img src="images/instfeed1.webp" alt=""></a>
+                                    @foreach (InstagramFeed item in @Model.InstagramFeeds)
+                                   {
+                                        <li>
+                                        <a style="cursor:pointer"><img src="~/images/@item.Img" alt=""></a>
                                     </li>
-                                    <li>
-                                        <a><img src="images/instfeed2.webp" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a><img src="images/instfeed3.webp" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a><img src="images/instfeed4.webp" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a><img src="images/instfeed5.webp" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a><img src="images/instfeed6.webp" alt=""></a>
-                                    </li>
+                                   }
+                                   
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -179,3 +107,5 @@
                         </div>
                     </div>
                 </div>
+
+               

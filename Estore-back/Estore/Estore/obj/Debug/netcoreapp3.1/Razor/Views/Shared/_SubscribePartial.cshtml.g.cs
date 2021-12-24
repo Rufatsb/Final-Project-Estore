@@ -33,8 +33,15 @@ using Estore.ViewModels.ProductViewModel;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "C:\Users\Ali Aliyev\Desktop\Final project\Estore-back\Estore\Estore\Views\_ViewImports.cshtml"
+using Estore.ViewModels.BlogViewModel;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b673d90e119ed99486c3762dfac17babae3753cf", @"/Views/Shared/_SubscribePartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ea771ba66532a6b95f34b40883d5a0982c970837", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5320407c15a027863ea3b5d01cdbad822486983c", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__SubscribePartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Subscribe>
     {
         #pragma warning disable 1998

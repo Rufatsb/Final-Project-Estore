@@ -1,5 +1,6 @@
 ﻿using Estore.DAL;
 using Estore.Models;
+using Estore.ViewModels.BlogViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -17,9 +18,18 @@ namespace Estore.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync(string title)
         {
-            Banner banner = await _context.Banners.FirstOrDefaultAsync();
-            banner.Title = title;
-            return View(await Task.FromResult(banner));
+
+            return View(await Task.FromResult(
+
+                new BlogVM
+                {
+                    Tags = await _context.Tags.ToListAsync(),
+                    Categories = await _context.Categories.ToListAsync(),
+                    Posts = await _context.Posts.ToListAsync(),
+                    InstagramFeeds = await _context.InstagramFeeds.ToListAsync()
+
+                }
+                )) ;
 
         }
     }
