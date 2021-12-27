@@ -1,0 +1,182 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+  @await Component.InvokeAsync("Banner",new { Title = "Category" })
+
+   <!-- Latest products area starts -->
+    <section id="latest-products" class="category-filter-pading">
+        <div class="container">
+            <div class="row product-btn d-flex justify-content-start align-items-start">
+                <div class="col-xl-8 col-lg-7 col-md-7">
+                    <ul id="filter-group" class="filter-group float-start">
+                        <li class="filter-item"><a class="filter-item-btn active" onclick="filterSelection('all')" href="javascript:void(0);">All</a></li>
+                        <li class="filter-item"><a class="filter-item-btn" onclick="filterSelection('new')" href="javascript:void(0);">New</a></li>
+                        <li class="filter-item"><a class="filter-item-btn" onclick="filterSelection('featured')" href="javascript:void(0);">Featured</a> </li>
+                        <li class="filter-item"><a class="filter-item-btn" onclick="filterSelection('offer')" href="javascript:void(0);">Offer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+
+
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new offer">
+
+                    <div class="single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter1.webp" alt="">
+                            <div class="new-product">
+                                <span>New</span>
+                            </div>
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Shorts</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$10.00</li>
+                                    <li class="discount">$20.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv featured">
+                    <div class="single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter2.webp" alt="">
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Green sweater</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$20.00</li>
+                                    <li class="discount">$40.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new offer">
+                    <div class="single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter3.webp" alt="">
+                            <div class="new-product">
+                                <span>New</span>
+                            </div>
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Yellow sweater</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$25.00</li>
+                                    <li class="discount">$50.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv featured offer">
+                    <div class="single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter4.webp" alt="">
+
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Gray shirt</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$10.00</li>
+                                    <li class="discount">$25.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv offer">
+                    <div class=" single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter5.webp" alt="">
+
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Sweatpants</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$20.00</li>
+                                    <li class="discount">$30.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new featured">
+                    <div class="single-product mb-60">
+                        <div class="product-img">
+                            <img src="images/filter6.webp" alt="">
+                            <div class="new-product">
+                                <span>New</span>
+                            </div>
+                        </div>
+                        <div class="product-caption">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="#">Jeans jacket</a></h4>
+                            <div class="price">
+                                <ul>
+                                    <li>$60.00</li>
+                                    <li class="discount">$100.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </section>
+    <!-- Latest products area ends -->
+ @await Html.PartialAsync("_LatestSubscribePartial")
+    @await Html.PartialAsync("_ShopMethodPartial")
+    @await Html.PartialAsync("_GalleryPartial")
