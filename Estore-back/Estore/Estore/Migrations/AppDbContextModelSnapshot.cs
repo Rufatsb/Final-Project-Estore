@@ -139,6 +139,97 @@ namespace Estore.Migrations
                     b.ToTable("Banners");
                 });
 
+            modelBuilder.Entity("Estore.Models.BestCollectionModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Leftimg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Modelimg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(63)")
+                        .HasMaxLength(63);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BestCollectionModels");
+                });
+
+            modelBuilder.Entity("Estore.Models.BestCollectionitems", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BestCollectionModelId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Img")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(63)")
+                        .HasMaxLength(63);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BestCollectionModelId");
+
+                    b.ToTable("BestCollectionitems");
+                });
+
+            modelBuilder.Entity("Estore.Models.BestProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Backgroundimg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Img")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Modelimg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Productname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BestProducts");
+                });
+
             modelBuilder.Entity("Estore.Models.BlogComments", b =>
                 {
                     b.Property<int>("Id")
@@ -274,6 +365,56 @@ namespace Estore.Migrations
                     b.ToTable("ContactInfos");
                 });
 
+            modelBuilder.Entity("Estore.Models.FilterCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Category")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FilterCategories");
+                });
+
+            modelBuilder.Entity("Estore.Models.FilterItems", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("DiscountPrice")
+                        .HasColumnType("float");
+
+                    b.Property<int>("FilterCategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Filterselect")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDiscount")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Productimg")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FilterCategoryId");
+
+                    b.ToTable("FilterItems");
+                });
+
             modelBuilder.Entity("Estore.Models.Gallery", b =>
                 {
                     b.Property<int>("Id")
@@ -291,6 +432,33 @@ namespace Estore.Migrations
                     b.ToTable("Galleries");
                 });
 
+            modelBuilder.Entity("Estore.Models.HomeSlider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Backgroundimg")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Discountpercent")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Img")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HomeSliders");
+                });
+
             modelBuilder.Entity("Estore.Models.InstagramFeed", b =>
                 {
                     b.Property<int>("Id")
@@ -306,6 +474,38 @@ namespace Estore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("InstagramFeeds");
+                });
+
+            modelBuilder.Entity("Estore.Models.LatestSubscribe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("BackgroundImg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
+
+                    b.Property<string>("Img")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LatestSubscribes");
                 });
 
             modelBuilder.Entity("Estore.Models.Map", b =>
@@ -400,6 +600,36 @@ namespace Estore.Migrations
                     b.HasIndex("TagsId");
 
                     b.ToTable("PostTags");
+                });
+
+            modelBuilder.Entity("Estore.Models.ShopCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("BrandName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(63)")
+                        .HasMaxLength(63);
+
+                    b.Property<string>("Img")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<bool>("IsBestnewDeal")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDiscount")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsNewCollection")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ShopCategories");
                 });
 
             modelBuilder.Entity("Estore.Models.ShopMethod", b =>
@@ -513,11 +743,29 @@ namespace Estore.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Estore.Models.BestCollectionitems", b =>
+                {
+                    b.HasOne("Estore.Models.BestCollectionModel", "Model")
+                        .WithMany("Collectionitems")
+                        .HasForeignKey("BestCollectionModelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Estore.Models.BlogComments", b =>
                 {
                     b.HasOne("Estore.Models.Post", "Post")
                         .WithMany("BlogComments")
                         .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Estore.Models.FilterItems", b =>
+                {
+                    b.HasOne("Estore.Models.FilterCategory", "Category")
+                        .WithMany("FilterItems")
+                        .HasForeignKey("FilterCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

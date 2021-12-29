@@ -21,7 +21,8 @@ namespace Estore.Controllers
                   new ProductVM
                   {
 
-                      Subscribe = await _context.Subscribes.FirstOrDefaultAsync()
+                      Subscribe = await _context.Subscribes.FirstOrDefaultAsync(),
+                      ShopMethods = await _context.ShopMethods.ToListAsync()
 
 
 

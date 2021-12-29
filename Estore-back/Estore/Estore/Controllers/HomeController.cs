@@ -23,7 +23,16 @@ namespace Estore.Controllers
                  new HomeVM
                  {
                      Galleries = await _context.Galleries.ToListAsync(),
-                     
+                     ShopMethods = await _context.ShopMethods.ToListAsync(),
+                     LatestSubscribe = await _context.LatestSubscribes.FirstOrDefaultAsync(),
+                     BestCollection = await _context.BestCollectionModels.Include(b=>b.Collectionitems).FirstOrDefaultAsync(),
+                     BestProduct = await _context.BestProducts.FirstOrDefaultAsync(),
+                     ShopCategories = await _context.ShopCategories.ToListAsync(),
+                     HomeSliders = await _context.HomeSliders.ToListAsync()
+
+
+
+
 
 
 

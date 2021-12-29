@@ -6,41 +6,21 @@
 
       <!-- Hero Area starts  -->
     <section class="slider-area">
-        <div class="single-slider slider-height" style="background-image: url(&quot;images/h1_hero.jpg.webp&quot;);">
+        @foreach (HomeSlider homeSlider in Model.HomeSliders)
+       {
+            <div class="single-slider slider-height" style="background-image: url(&quot;images/@homeSlider.Backgroundimg&quot;);">
             <div class="container">
                 <div class="row d-flex align-items-center justify-content-between">
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
                         <div class="hero__img animate__animated animate__bounceIn">
-                            <img src="images/herohomeslider.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
-                        <div class="hero__caption">
-                            <span class="animate__animated animate__fadeInRight">60% Discount</span>
-                            <h1 class="animate__animated animate__fadeInRight">Winter <br> Collection</h1>
-                            <p class="animate__animated animate__fadeInRight">Best Cloth Collection By 2020!</p>
-
-                            <div class="hero__btn animate__animated animate__fadeInRight">
-                                <a href="industries.html" class="btn custom-btn hero-btn">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="single-slider slider-height" style="background-image: url(&quot;images/h1_hero.jpg.webp&quot;);">
-            <div class="container">
-                <div class="row d-flex align-items-center justify-content-between">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
-                        <div class="hero__img animate__animated animate__bounceIn">
-                            <img src="images/herohomeslider.webp " alt=" ">
+                            <img src="images/@homeSlider.Img" alt=" ">
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8 ">
                         <div class="hero__caption ">
-                            <span class="animate__animated animate__fadeInRight">60% Discount</span>
-                            <h1 class="animate__animated animate__fadeInRight">Winter <br> Collection</h1>
-                            <p class="animate__animated animate__fadeInRight">Best Cloth Collection By 2020!</p>
+                            <span class="animate__animated animate__fadeInRight">@homeSlider.Discountpercent% Discount</span>
+                            <h1 class="animate__animated animate__fadeInRight">@Html.Raw(@homeSlider.Title)</h1>
+                            <p class="animate__animated animate__fadeInRight">@homeSlider.Description</p>
 
 
                             <div class="hero__btn animate__animated animate__fadeInRight">
@@ -50,11 +30,8 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
+       }
     </section>
     <!-- Hero area ends -->
     <!-- Category area starts -->
@@ -70,42 +47,35 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-4 col-lg-6">
+                @foreach (ShopCategory item in Model.ShopCategories)
+               {
+                    <div class="col-xl-4 col-lg-6">
                     <div class="single-category mb-30">
                         <div class="category-img">
-                            <img src="images/homecategory1.webp" alt="homecategoryimg">
+                            <img src="images/@item.Img" alt="homecategoryimg">
                             <div class="category-caption">
-                                <h2>Owmen`s</h2>
+                               
+                                @if (item.IsBestnewDeal)
+                               {
+                                <h2>@item.BrandName</h2>    
                                 <span class="best"><a href="#">Best New Deals</a></span>
-                                <span class="collection">New Collection</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6">
-                    <div class="single-category mb-30">
-                        <div class="category-img">
-                            <img src="images/homecategory2.webp" alt="homecategoryimg">
-                            <div class="category-caption text-center">
-                                <span class="collection">Discount!</span>
-                                <h2>Winter Cloth</h2>
+                                    <span class="collection">New Collection</span>
+                                }
+                                else
+                                {
+                                      <span class="collection">Discount!</span>
+                                <h2>@item.BrandName</h2>
                                 <p>New Collection</p>
+                                    
+                                }
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-6">
-                    <div class="single-category mb-30">
-                        <div class="category-img">
-                            <img src="images/homecategory3.webp" alt="homecategoryimg">
-                            <div class="category-caption">
-                                <h2>Man`s Cloth</h2>
-                                <span class="best"><a href="#">Best New Deals</a></span>
-                                <span class="collection">New Collection</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               }
+               
+              
 
             </div>
         </div>
@@ -136,7 +106,7 @@
             <div class="row">
 
 
-                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new offer">
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new">
 
                     <div class="single-product mb-60">
                         <div class="product-img">
@@ -153,7 +123,7 @@
                                 <i class="far fa-star low-star"></i>
                                 <i class="far fa-star low-star"></i>
                             </div>
-                            <h4><a href="#">Shorts</a></h4>
+                            <h4><a href="#">Short</a></h4>
                             <div class="price">
                                 <ul>
                                     <li>$10.00</li>
@@ -186,7 +156,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new offer">
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new">
                     <div class="single-product mb-60">
                         <div class="product-img">
                             <img src="images/filter3.webp" alt="">
@@ -212,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv featured offer">
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv offer">
                     <div class="single-product mb-60">
                         <div class="product-img">
                             <img src="images/filter4.webp" alt="">
@@ -260,7 +230,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new featured">
+                <div class="col-xl-4 col-lg-4 col-md-6 filterDiv new">
                     <div class="single-product mb-60">
                         <div class="product-img">
                             <img src="images/filter6.webp" alt="">
@@ -296,21 +266,21 @@
     <!-- Latest products area ends -->
     <!-- Best product area starts -->
     <section class="best-product-area plr-60">
-        <div class="product-wrapper bg-height" style="background-image:url(images/bestproduct.webp)">
+        <div class="product-wrapper bg-height" style="background-image:url(images/@Model.BestProduct.Backgroundimg)">
             <div class="container position-relative">
                 <div class="row justify-content-between align-items-end">
                     <div class="product-man position-absolute  d-none d-lg-block">
-                        <img src="images/bestproduct2.webp" alt="">
+                        <img src="images/@Model.BestProduct.Modelimg" alt="">
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 d-none d-lg-block">
                         <div class="vertical-text">
-                            <span>Manz</span>
+                            <span>@Model.BestProduct.Productname</span>
                         </div>
                     </div>
                     <div class="col-xl-8 col-lg-8">
                         <div class="best-product-caption">
                             <h2>Find The Best Product<br> from Our Shop</h2>
-                            <p>Designers who are interesten creating state ofthe.</p>
+                            <p>@Model.BestProduct.Title</p>
                             <a href="#" class="black-btn">Shop Now</a>
                         </div>
                     </div>
@@ -319,7 +289,7 @@
         </div>
 
         <div class="shape animate__animated animate__bounce d-none d-md-block">
-            <img src="images/bestproduct3.webp">
+            <img src="images/@Model.BestProduct.Img">
         </div>
     </section>
     <!-- Best product area ends -->
@@ -331,57 +301,42 @@
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="best-left-cap">
                         <h2>Best Collection of This Month</h2>
-                        <p>Designers who are interesten crea.</p>
+                        <p>@Model.BestCollection.Title</p>
                         <a href="#" class="btn shop1-btn">Shop Now</a>
                     </div>
                     <div class="best-left-img mb-30 d-none d-sm-block">
-                        <img src="images/bestcollectionarea1.webp" alt="">
+                        <img src="images/@Model.BestCollection.Leftimg" alt="">
                     </div>
                 </div>
 
                 <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                     <div class="best-mid-img mb-30 ">
-                        <img src="images/bestcollectionarea2.webp" alt="">
+                        <img src="images/@Model.BestCollection.Modelimg" alt="">
                     </div>
                 </div>
 
                 <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="best-right-cap float-end">
+                    @foreach (BestCollectionitems item in Model.BestCollection.Collectionitems)
+                   {
+                        <div class="best-right-cap float-end">
                         <div class="best-single mb-30">
                             <div class="single-cap">
-                                <h4>Menz Winter<br> Jacket</h4>
+                               <h4>@Html.Raw(@item.ProductName)</h4>
                             </div>
                             <div class="single-img">
-                                <img src="images/bestcollectionarea3.webp" alt="">
+                                <img src="images/@item.Img" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="best-right-cap float-end">
-                        <div class="best-single mb-30">
-                            <div class="single-cap active">
-                                <h4>Menz Winter<br>Jacket</h4>
-                            </div>
-                            <div class="single-img">
-                                <img src="images/bestcollectionarea4.webp" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="best-right-cap float-end">
-                        <div class="best-single mb-30">
-                            <div class="single-cap">
-                                <h4>Menz Winter<br> Jacket</h4>
-                            </div>
-                            <div class="single-img">
-                                <img src="images/bestcollectionarea5.webp" alt="">
-                            </div>
-                        </div>
-                    </div>
+                   }
+                   
+                   
                 </div>
             </div>
         </div>
     </section>
     <!-- Best collection area ends -->
    
-    @await Html.PartialAsync("_LatestSubscribePartial")
-    @await Html.PartialAsync("_ShopMethodPartial")
+    @await Html.PartialAsync("_LatestSubscribePartial",Model.LatestSubscribe)
+    @await Html.PartialAsync("_ShopMethodPartial",Model.ShopMethods)
     @await Html.PartialAsync("_GalleryPartial",Model.Galleries)

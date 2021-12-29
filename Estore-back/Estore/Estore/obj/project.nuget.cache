@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Jwj1VlY3DMNvblZaNMlVbF+BTgSR/z/sjiRSDaKnXhZVlTi3MbKRXrTFhIuKV36KmMRWAAvnaZXQIlvZMZ2F1w==",
+  "dgSpecHash": "U8W7F0dQam/7xUIgvVK7mJy/D38W5oXwJSzWRuhhwalpmWt0Wv+6fijgrim0JqwqXGfyEDgg6gQk0KBcPRAOBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ali Aliyev\\Desktop\\Final project\\Final-Project-Estore\\Estore-back\\Estore\\Estore\\Estore.csproj",
+  "projectFilePath": "C:\\Users\\Ali Aliyev\\Desktop\\Final-Project-Estore\\Final-Project-Estore\\Estore-back\\Estore\\Estore\\Estore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ali Aliyev\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Ali Aliyev\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

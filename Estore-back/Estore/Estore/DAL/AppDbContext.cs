@@ -33,6 +33,19 @@ namespace Estore.DAL
         public virtual DbSet<ContactInfo> ContactInfos { get; set; }
         public virtual DbSet<Gallery> Galleries { get; set; }
         public virtual DbSet<ShopMethod> ShopMethods { get; set; }
+        public virtual DbSet<LatestSubscribe> LatestSubscribes { get; set; }
+        public virtual DbSet<BestCollectionModel> BestCollectionModels { get; set; }
+        public virtual DbSet<BestCollectionitems> BestCollectionitems { get; set; }
+        public virtual DbSet<BestProduct> BestProducts { get; set; }
+        public virtual DbSet<ShopCategory> ShopCategories { get; set; }
+        public virtual DbSet<HomeSlider> HomeSliders { get; set; }
+        public virtual DbSet<FilterItems> FilterItems { get; set; }
+        public virtual DbSet<FilterCategory> FilterCategories { get; set; }
+
+
+
+
+
 
 
 

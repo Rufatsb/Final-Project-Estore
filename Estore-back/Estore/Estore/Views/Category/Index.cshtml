@@ -1,4 +1,5 @@
-﻿@{
+﻿@model CategoryVM
+@{
     ViewData["Title"] = "Index";
 }
   @await Component.InvokeAsync("Banner",new { Title = "Category" })
@@ -177,6 +178,6 @@
 
     </section>
     <!-- Latest products area ends -->
- @await Html.PartialAsync("_LatestSubscribePartial")
-    @await Html.PartialAsync("_ShopMethodPartial")
-    @await Html.PartialAsync("_GalleryPartial")
+ @await Html.PartialAsync("_LatestSubscribePartial",Model.LatestSubscribe)
+    @await Html.PartialAsync("_ShopMethodPartial",Model.ShopMethods)
+    @await Html.PartialAsync("_GalleryPartial",Model.Galleries)

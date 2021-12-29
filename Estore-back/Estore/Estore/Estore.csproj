@@ -17,6 +17,8 @@
     <Compile Remove="Migrations\20211226001301_checktables.Designer.cs" />
     <Compile Remove="Migrations\20211226001505_addedsomedataannotations.cs" />
     <Compile Remove="Migrations\20211226001505_addedsomedataannotations.Designer.cs" />
+    <Compile Remove="Migrations\20211229022648_HomeSliderTableadded.cs" />
+    <Compile Remove="Migrations\20211229022648_HomeSliderTableadded.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,7 +32,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\CategoryViewModel\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 

@@ -14,6 +14,7 @@ namespace Estore.ViewModels.BlogViewModel
         public virtual IEnumerable<BlogComments> BlogComments { get; set; }
         public virtual Post Post { get; set; }
         public virtual BlogComments BlogComment { get; set; }
+       
 
 
 
