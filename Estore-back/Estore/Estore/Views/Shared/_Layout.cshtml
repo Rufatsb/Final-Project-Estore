@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Estore.ViewModels.BasketViewModel; 
+@inject Estore.Services.LayoutService layoutService;
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -49,19 +51,10 @@
 
                                 <ul class="nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="login.html"> My Account</a>
+                                        <a class="nav-link" asp-controller="Login" asp-action="Index"> My Account</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#"> Wish List</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="product-list.html">Shopping</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="cart.html">Cart</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="checkout.html">Checkout</a>
+                                        <a class="nav-link" asp-controller="Product" asp-action="Index">Shopping</a>
                                     </li>
 
                                 </ul>
@@ -150,15 +143,76 @@
                             </div>
                             <ul class="bottom-header-right  d-flex d-lg-table-row">
 
-                                <li class="d-none d-xl-table-cell">
+                                <li class="d-none d-xl-table-cell pt-3">
                                     <div class="favorit-items">
                                         <i class="far fa-heart"></i>
                                     </div>
                                 </li>
-                                <li class="d-lg-table-cell shopping">
-                                    <div class="shopping-card">
+                                <li class="d-lg-table-cell shopping pt-3">
+                                    <div class="shopping-card cart-block">
                                         <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                               <div class="cart-total">
+                                            <span class="text-number">
+                                                @layoutService.GetBasket().Count
+                                            </span>
+                                           
+                                            @if (layoutService.GetBasket().Count > 0)
+                                            {
+                                                double total = 0;
+                                                foreach (BasketVM basketVM in layoutService.GetBasket())
+                                                {
+                                                    total += (basketVM.Count * basketVM.Price);
+                                                }
+
+                                                <span class="price pt-3">
+                                                    $@total.ToString("F2");
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span class="price pt-3">
+                                                    $0.00
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </span>
+                                            }
+
+                                        </div>
+                                        <div class="cart-dropdown-block">
+                                            <div class=" single-cart-block ">
+                                                @foreach (BasketVM basketVM in layoutService.GetBasket())
+	                                            {
+                                                    <div class="cart-product">
+                                                        <a href="~/product-details.html" class="image">
+                                                            <img style="width: 120px !important; padding: 0 10px !important;" src="~/images/@basketVM.MainImage" alt="">
+                                                        </a>
+                                                        <div class="content">
+                                                            <h3 class="title">
+                                                                <a href="~/product-details.html">
+                                                                    @basketVM.Title
+                                                                </a>
+                                                            </h3>
+                                                            <p class="price"><span class="qty">@basketVM.Count ×</span> $@((basketVM.Count * basketVM.Price).ToString("F2"))</p>
+                                                            <button class="cross-btn"><i class="fas fa-times"></i></button>
+                                                        </div>
+                                                    </div>
+	                                            }
+                                            </div>
+                                            <div class="single-cart-block">
+                                                <div class="btn-block">
+                                                    <a asp-controller="Cart" asp-action="Index" class="btn-block-btns">
+                                                        View Cart <i style="" class="fas fa-chevron-right"></i>
+                                                    </a>
+                                                    <a href="~/checkout.html" class="btn-block-btns" style=" background: #62ab00;color: #fff !important;margin-right: 0;">
+                                                        Check Out <i class="fas fa-chevron-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                   
+                                 
+                                    
                                 </li>
                                 <li class="d-none d-lg-table-cell"> <a href="login.html" class="btn header-btn">Sign in</a></li>
 
@@ -336,5 +390,19 @@
     <script src="~/js/script.js">
     </script>
     <script src="~/js/owl.carousel.min.js"></script>
+    
+    <script>
+        var $input = $(".input-number");
+
+        $input.val(1);
+
+
+        $(".minuspilus").click(function() {
+            if ($(this).hasClass('input-number-increment'))
+                $input.val(parseInt($input.val()) + 1);
+            else if ($input.val() >= 1)
+                $input.val(parseInt($input.val()) - 1);
+        });
+    </script>
     </body>
 </html>

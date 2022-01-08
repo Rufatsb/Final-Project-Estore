@@ -41,7 +41,9 @@ namespace Estore.DAL
         public virtual DbSet<HomeSlider> HomeSliders { get; set; }
         public virtual DbSet<FilterItems> FilterItems { get; set; }
         public virtual DbSet<FilterCategory> FilterCategories { get; set; }
-
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Productimages> Productimages { get; set; }
+        public virtual DbSet<ProductCategory> ProductCategories { get; set; }
 
 
 

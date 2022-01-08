@@ -632,3 +632,8 @@ C:\Users\Ali Aliyev\Desktop\Final-Project-Estore\Final-Project-Estore\Estore-bac
 C:\Users\Ali Aliyev\Desktop\Final-Project-Estore\Final-Project-Estore\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Estore.dll
 C:\Users\Ali Aliyev\Desktop\Final-Project-Estore\Final-Project-Estore\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Estore.pdb
 C:\Users\Ali Aliyev\Desktop\Final-Project-Estore\Final-Project-Estore\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Estore.genruntimeconfig.cache
+C:\Users\Ali Aliyev\Desktop\Final-Project-Estore\Final-Project-Estore\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Filter\Default.cshtml.g.cs
+C:\Users\Ali Aliyev\Desktop\Final-Project-Estore\Final-Project-Estore\Estore-back\Estore\Estore\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Ali Aliyev\Desktop\Final-Project-Estore\Final-Project-Estore\Estore-back\Estore\Estore\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Ali Aliyev\Desktop\Final-Project-Estore\Final-Project-Estore\Estore-back\Estore\Estore\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Ali Aliyev\Desktop\Final-Project-Estore\Final-Project-Estore\Estore-back\Estore\Estore\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs

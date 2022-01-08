@@ -37,7 +37,8 @@ $(document).ready(function() {
         dots: false,
         autoplayTimeout: 3000,
         smartSpeed: 450,
-        autoplaySpeed:1500
+        autoplaySpeed: 1500,
+        autoWidth: true,
 
     });
 
@@ -108,7 +109,6 @@ $(document).ready(function() {
 
 
     });
-
 
 
 
@@ -224,10 +224,10 @@ function w3RemoveClass(element, name) {
 var btnContainer = document.getElementById("filter-group");
 var btns = btnContainer.getElementsByClassName("filter-item-btn");
 var active = document.querySelector(".active")
-active.style.color = "#ff003c";
 for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-        btns[i].classList.toggle('active');
-
+    btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
     });
 }

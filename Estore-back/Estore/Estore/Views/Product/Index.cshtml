@@ -22,9 +22,12 @@
                             <div class="product-categories">
                                 <div class="category-list">Category <i class="right fas fa-caret-down"></i> </div>
                                 <div class="category-list-items" style="display: none;">
-                                    <p><a href="#">New</a></p>
-                                    <p><a href="#"> Featured</a></p>
-                                    <p><a href="#">Offer</a></p>
+                                    @foreach (ProductCategory item in Model.ProductCategories)
+                                   {
+                                    <p><a href="#">@item.Name</a></p>
+                                       
+                                   }
+                                    
                                 </div>
                             </div>
                         </div>
@@ -46,79 +49,26 @@
                 <div class="col-md-8">
                     <div class="product-items">
                         <div class="row">
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-product-item">
-                                    <img src="images/filter6.webp" alt="">
-                                    <h3><a href="single-product.html">Cervical pillow for airplane car office nap pillow</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-product-item">
-                                    <img src="images/filter5.webp" alt="">
-                                    <h3><a href="single-product.html">Geometric striped flower home classy decor</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-product-item">
-                                    <img src="images/filter3.webp" alt="">
-                                    <h3><a href="single-product.html">Foam filling cotton slow rebound pillows</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-product-item">
-                                    <img src="images/filter4.webp" alt="">
-                                    <h3><a href="single-product.html">Memory foam filling cotton Slow rebound pillows</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-product-item">
-                                    <img src="images/filter2.webp" alt="">
-                                    <h3><a href="single-product.html">Sleeping orthopedic sciatica Back Hip Joint Pain relief</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-product-item">
-                                    <img src="images/filter1.webp" alt="">
+                            @foreach (Product product in Model.Products)
+                        {
+                            @foreach (Productimages productimages in product.Productimages)
+                            {
 
-                                    <h3><a href="single-product.html">Memory foam filling cotton Slow rebound pillows</a> </h3>
-                                    <p>From $5</p>
+
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="single-product-item">
+                                        <img src="images/@productimages.Img" alt="">
+                                        <a asp-action="Productdetails" asp-route-id="@product.Id"> <p class="text-center pt-3">@product.Name</p></a> 
+                                        <p class="text-center">$@product.Price</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-product-item">
-                                    <img src="images/filter3.webp" alt="">
-                                    <h3><a href="single-product.html">Cervical pillow for airplane car office nap pillow</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-product-item">
-                                    <img src="images/filter5.webp" alt="">
-                                    <h3> <a href="single-product.html">Geometric striped flower home classy decor</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-product-item">
-                                    <img src="images/filter4.webp" alt="">
-                                    <h3>
-                                        <a href="single-product.html">Sleeping orthopedic sciatica Back Hip Joint Pain relief</a></h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-product-item">
-                                    <img src="images/filter2.webp" alt="">
-                                    <h3>
-                                        <a href="single-product.html">Memory foam filling cotton Slow rebound pillows</a></h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
+                            }
+                        }
+                          
+
+                 
+                           
+                           
                         </div>
                         <div class="text-center">
                             <button class="load-more">Load More</button>

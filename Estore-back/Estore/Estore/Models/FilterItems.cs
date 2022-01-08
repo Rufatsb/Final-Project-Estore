@@ -1,4 +1,6 @@
-﻿namespace Estore.Models
+﻿using System;
+
+namespace Estore.Models
 {
     public class FilterItems
     {
@@ -7,7 +9,7 @@
         public string Filterselect { get; set; }
         public bool IsDiscount { get; set; }
         public double Price { get; set; }
-        public double DiscountPrice { get; set; }
+        public Nullable<double> DiscountPrice { get; set; }
         public string Productimg { get; set; }
         public FilterCategory Category { get; set; }
         public int FilterCategoryId { get; set; }

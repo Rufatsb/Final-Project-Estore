@@ -28,7 +28,8 @@ namespace Estore.Controllers
                      BestCollection = await _context.BestCollectionModels.Include(b=>b.Collectionitems).FirstOrDefaultAsync(),
                      BestProduct = await _context.BestProducts.FirstOrDefaultAsync(),
                      ShopCategories = await _context.ShopCategories.ToListAsync(),
-                     HomeSliders = await _context.HomeSliders.ToListAsync()
+                     HomeSliders = await _context.HomeSliders.ToListAsync(),
+                   
 
 
 

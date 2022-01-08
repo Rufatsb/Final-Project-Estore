@@ -4,64 +4,96 @@
 }
   @await Component.InvokeAsync("Banner",new { Title = "Single Product" })
 
-    <!-- Testimonial slider starts -->
+     <!-- Testimonial slider starts -->
     <section class="testimonial-slider-product-detail">
 
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="owl-carousel">
-                        <div class="item">
+                        
+                        @foreach (Productimages image in Model.Product.Productimages)
+                        {
 
-                            <div class="slide-img">
-                                <img src="images/xsingle_product.png.pagespeed.ic.zdTtvLLsqx.webp" alt="">
+
+                         
+                               if (Model.Product.Productimages.ToArray().Length<3)
+                         {
+                              <div class="item" style="height:500px;width:500px">
+
+                                <div class="slide-img">
+                                    <img src="~/images/@image.Img" alt="">
+                                </div>
+
+
                             </div>
+                             <div class="item" style="height:500px;width:500px">
+
+                                <div class="slide-img">
+                                    <img src="~/images/@image.Img" alt="">
+                                </div>
 
 
-                        </div>
-
-                        <div class="item">
-
-                            <div class="slide-img">
-                                <img src="images/xsingle_product.png.pagespeed.ic.zdTtvLLsqx.webp" alt="">
                             </div>
+                             <div class="item" style="height:500px;width:500px">
+
+                                <div class="slide-img">
+                                    <img src="~/images/@image.Img" alt="">
+                                </div>
 
 
-                        </div>
-
-                        <div class="item">
-                            <div class="slide-img">
-                                <img src="images/xsingle_product.png.pagespeed.ic.zdTtvLLsqx.webp" alt="">
                             </div>
+                         }
+                        else
+                        {
+                               <div class="item" style="height:500px;width:500px">
+
+                                <div class="slide-img">
+                                    <img src="~/images/@image.Img" alt="">
+                                </div>
 
 
+                            </div>
+                        }
+                             
+                          }
+                    
+                        
 
-                        </div>
+                         
 
 
                     </div>
                     <div class="product-detail text-center">
                         <h3>
-                            Foam filling cotton slow <br> rebound pillows
+                           @Model.Product.Name
                         </h3>
                         <p>
-                            Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources. Credibly innovate granular internal or “organic” sources whereas high standards in web-readiness. Credibly innovate granular internal or organic sources
-                            whereas high standards in web-readiness. Energistically scale future-proof core competencies vis-a-vis impactful experiences. Dramatically synthesize integrated schemas. with optimal networks.
+                            @Model.Product.Description
                         </p>
 
                         <div class="product-add-to-card">
+                            <form method="post"> 
                             <div class="product-quantity">
+                                
+
+                                
                                 <p>Quantity</p>
                                 <div class="product-count d-inline-block">
-                                    <span class="product-count-item number-decrement"> <i class="fas fa-minus"></i></span>
-                                    <input class="product-count-item input-number" type="text" value="1" min="0" max="10">
-                                    <span class="product-count-item  number-increment"> <i class="fas fa-plus"></i></span>
+                                    <span class="input-number-decrement minuspilus"> <i class="fas fa-minus"></i></span>
+
+                                    <input asp-for=BasketVM.Count style="width: 100px;text-align: center;" class="input-number" type="number"  min="0" max="100">
+                                    
+                                    <span class="input-number-increment minuspilus"> <i class="fas fa-plus"></i></span>
+                                   
                                 </div>
-                                <p>$5</p>
+                              <p>$@Model.Product.Price</p>
+                                
                             </div>
                             <div class="add-to-card-btn">
-                                <button class="load-more">add to cart</button>
+                                <a type="submit" asp-controller="Cart" asp-action="AddBasket" asp-route-Id="@Model.Product.Id" class="load-more">add to cart</a>
                             </div>
+                            </form>
                         </div>
                     </div>
 
@@ -70,6 +102,8 @@
 
         </div>
         </div>
+
+
     </section>
     <!-- Testomonial slider ends -->
     @await Html.PartialAsync("_SubscribePartial", Model.Subscribe)
