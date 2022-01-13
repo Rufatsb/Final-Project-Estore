@@ -78,7 +78,7 @@
                         <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                             <div class="logo d-flex justify-content-start">
 
-                                <a href="index.html"><img src="~/images/logo.webp"></a>
+                                <a asp-controller"Home" asp-action="Index"><img src="~/images/logo.webp"></a>
 
                             </div>
                         </div>
@@ -87,45 +87,39 @@
                                 <nav>
                                     <ul class="nav">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="index.html"> Home</a>
+                                            <a class="nav-link" asp-controller="Home" asp-action="Index"> Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="catagori.html"> Category</a>
+                                            <a class="nav-link" asp-controller="Category" asp-action="Index"> Category</a>
                                         </li>
                                         <li class="nav-item latest">
-                                            <a class="nav-link" href="#">Latest</a>
+                                            <a class="nav-link" asp-controller="Product" asp-action="Index">Latest</a>
                                             <ul>
                                                 <li>
-                                                    <a class="" href="product-list.html">product list</a>
+                                                    <a class="" asp-controller="Product" asp-action="Index">product list</a>
                                                 </li>
-                                                <li>
-                                                    <a class="" href="productdetails.html"> product details</a>
-                                                </li>
+
 
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Blog</a>
+                                            <a class="nav-link" asp-controller="Blog" asp-action="Index">Blog</a>
                                             <ul>
                                                 <li>
-                                                    <a class="" href="blog.html">Blog</a>
-                                                </li>
-                                                <li>
-                                                    <a class="" href="blogdetails.html"> Blog details</a>
+                                                    <a class="" asp-controller="Blog" asp-action="Index">Blog</a>
                                                 </li>
 
                                             </ul>
                                         </li>
                                         <li class="nav-item"><a class="nav-link" href="#">Pages</a>
                                             <ul>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="confirmation.html">Confirmation</a></li>
-                                                <li><a href="cart.html">Shopping Cart</a></li>
-                                                <li><a href="checkout.html">Product Checkout</a></li>
+                                                <li><a asp-controller="About" asp-action="Index">About</a></li>
+                                                <li><a asp-controller="Cart" asp-action="Index">Shopping Cart</a></li>
+                                                <li><a asp-controller="Checkout" asp-action="Index">Checkout</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="contact.html">Contact</a>
+                                            <a class="nav-link" asp-controller="Contact" asp-action="Index">Contact</a>
                                         </li>
                                     </ul>
 
@@ -150,7 +144,7 @@
                                 </li>
                                 <li class="d-lg-table-cell shopping pt-3">
                                     <div class="shopping-card cart-block">
-                                        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                        <a asp-controller="Cart" asp-action="Index"><i class="fas fa-shopping-cart"></i></a>
                                                <div class="cart-total">
                                             <span class="text-number">
                                                 @layoutService.GetBasket().Count
@@ -161,7 +155,7 @@
                                                 double total = 0;
                                                 foreach (BasketVM basketVM in layoutService.GetBasket())
                                                 {
-                                                    total += (basketVM.Count * basketVM.Price);
+                                                    total += (basketVM.Quantity * basketVM.Price);
                                                 }
 
                                                 <span class="price pt-3">
@@ -183,17 +177,17 @@
                                                 @foreach (BasketVM basketVM in layoutService.GetBasket())
 	                                            {
                                                     <div class="cart-product">
-                                                        <a href="~/product-details.html" class="image">
+                                                        <a asp-controller="Product" asp-action="Productdetails" asp-route-Id="@basketVM.Id" class="image">
                                                             <img style="width: 120px !important; padding: 0 10px !important;" src="~/images/@basketVM.MainImage" alt="">
                                                         </a>
                                                         <div class="content">
                                                             <h3 class="title">
-                                                                <a href="~/product-details.html">
+                                                                <a asp-controller="Product" asp-action="Productdetails" asp-route-Id="@basketVM.Id">
                                                                     @basketVM.Title
                                                                 </a>
                                                             </h3>
-                                                            <p class="price"><span class="qty">@basketVM.Count ×</span> $@((basketVM.Count * basketVM.Price).ToString("F2"))</p>
-                                                            <button class="cross-btn"><i class="fas fa-times"></i></button>
+                                                            <p class="price"><span class="qty">@basketVM.Quantity ×</span> $@((basketVM.Quantity * basketVM.Price).ToString("F2"))</p>
+                                                            <a asp-controller="Cart" asp-action="RemoveCart" asp-route-Id="@basketVM.Id" class="cross-btn"><i style="border:unset" class="fas fa-times"></i></a>
                                                         </div>
                                                     </div>
 	                                            }
@@ -203,7 +197,7 @@
                                                     <a asp-controller="Cart" asp-action="Index" class="btn-block-btns">
                                                         View Cart <i style="" class="fas fa-chevron-right"></i>
                                                     </a>
-                                                    <a href="~/checkout.html" class="btn-block-btns" style=" background: #62ab00;color: #fff !important;margin-right: 0;">
+                                                    <a asp-controller="Checkout" asp-action="Index" class="btn-block-btns" style=" background: #62ab00;color: #fff !important;margin-right: 0;">
                                                         Check Out <i class="fas fa-chevron-right"></i>
                                                     </a>
                                                 </div>
@@ -230,51 +224,45 @@
                                     <a href="~/javascript:void(0);" onclick="myFunction()" aria-haspopup="true" role="button" tabindex="0" class="mobile-nav-btn icon"><span class="mobile-nav-menu-txt">MENU</span><span class="mobile-nav-icon position-relative"><span style="top:0%" class="mobile-nav-icon-bar position-absolute"></span><span style="top: 33%;" class="mobile-nav-icon-bar position-absolute"></span><span style="top: 66%;" class="mobile-nav-icon-bar position-absolute"></span></span></a>
                                     <ul aria-hidden="true" role="menu" id="myLinks" class="mobile-navbar-ul">
                                         <li style="padding:0px 0px;" class="mobile-navbar-li">
-                                            <a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="index.html"> Home</a>
+                                            <a tabindex="-1" role="menuitem" class="mobile-navbar-a" asp-controller="Home" asp-action="Index"> Home</a>
                                         </li>
                                         <li style=" padding:0px 0px;" class="mobile-navbar-li">
-                                            <a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="catagori.html"> Category</a>
+                                            <a tabindex="-1" role="menuitem" class="mobile-navbar-a" asp-controller="Category" asp-action="Index"> Category</a>
                                         </li>
                                         <li style=" padding:0px 0px;" class="mobile-navbar-li">
-                                            <a tabindex="-1" role="menuitem" aria-haspopup="true" class="mobileanchor firstanchor" href="#">Latest
+                                            <a tabindex="-1" role="menuitem" aria-haspopup="true" class="mobileanchor firstanchor" asp-controller="Product" asp-action="Index">Latest
                                             <span class="mobilenav-arrow">+</span>
                                         </a>
                                             <ul role="menu" aria-hidden="false" class="mobile-submenu firstul">
                                                 <li>
-                                                    <a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="product-list.html">product list</a>
-                                                </li>
-                                                <li>
-                                                    <a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="productdetails.html"> product details</a>
+                                                    <a tabindex="-1" role="menuitem" class="mobile-navbar-a" asp-controller="Product" asp-action="Index">product list</a>
                                                 </li>
 
                                             </ul>
                                         </li>
                                         <li style=" padding:0px 0px;" class="mobile-navbar-li">
-                                            <a tabindex="-1" class="mobileanchor secondanchor" href="#">Blog
+                                            <a tabindex="-1" class="mobileanchor secondanchor" asp-controller="Blog" asp-action="Index">Blog
                                             <span class="mobilenav-arrow">+</span>
                                         </a>
                                             <ul class="mobile-submenu secondul">
                                                 <li>
-                                                    <a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="blog.html">Blog</a>
-                                                </li>
-                                                <li>
-                                                    <a tabindex="-1" role="menuitem" class="mobile-navbar-a" class="mobile-navbar-a" href="blogdetails.html"> Blog details</a>
+                                           <a tabindex="-1" role="menuitem" class="mobile-navbar-a" asp-controller="Blog" asp-action="Index">Blog</a>
+
                                                 </li>
 
                                             </ul>
                                         </li>
-                                        <li style=" padding: 0px 0px;" class="mobile-navbar-li"><a tabindex="-1" aria-haspopup="true" class="mobileanchor thirdanchor" href="#">Pages
+                                        <li style="padding: 0px 0px;" class="mobile-navbar-li"><a tabindex="-1" aria-haspopup="true" class="mobileanchor thirdanchor">Pages
                                         <span class="mobilenav-arrow">+</span>
                                     </a>
                                             <ul class="mobile-submenu thirdul">
-                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="about.html">About</a></li>
-                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="confirmation.html">Confirmation</a></li>
-                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="cart.html">Shopping Cart</a></li>
-                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" href="checkout.html">Product Checkout</a></li>
+                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" asp-controller="About" asp-action="Index">About</a></li>
+                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" asp-controller="Cart" asp-action="Index">Shopping Cart</a></li>
+                                                <li><a tabindex="-1" role="menuitem" class="mobile-navbar-a" asp-controller="Checkout" asp-action="Index">Product Checkout</a></li>
                                             </ul>
                                         </li>
                                         <li style=" padding: 0px 0px;" class="mobile-navbar-li">
-                                            <a tabindex="-1" class="mobile-navbar-a" href="contact.html">Contact</a>
+                                            <a tabindex="-1" class="mobile-navbar-a" asp-controller="Contact" asp-action="Index">Contact</a>
                                         </li>
                                     </ul>
 
@@ -300,12 +288,12 @@
  <!-- Footer starts  -->
     <footer>
         <div class="footer-area footer-padding ">
-            <div class="container ">
+            <div class="container">
                 <div class="row d-flex justify-content-between ">
                     <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6 ">
                         <div class="single-footer-div ">
                             <div class="footer-logo ">
-                                <a href="~/index.html "><img src="~/images/logo.webp " alt=" "></a>
+                                <a asp-controller="Home" asp-action="Index"><img src="~/images/logo.webp" alt=" "></a>
                             </div>
                             <div class="footer-title ">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
@@ -319,10 +307,10 @@
 
 
                             <ul>
-                                <li><a href="~/about.html">About</a></li>
-                                <li><a href="~/product-list.html"> Offers &amp; Discounts</a></li>
-                                <li><a href="~/checkout.html"> Get Coupon</a></li>
-                                <li><a href="~/contact.html"> Contact Us</a></li>
+                                <li><a asp-controller="About" asp-action="Index">About</a></li>
+                                <li><a asp-controller="Product" asp-action="Index"> Offers &amp; Discounts</a></li>
+                                <li><a asp-controller="Checkout" asp-action="Index"> Get Coupon</a></li>
+                                <li><a asp-controller="Contact" asp-action="Index"> Contact Us</a></li>
                             </ul>
                         </div>
 
@@ -331,10 +319,10 @@
                         <div class="footer-title ">
                             <h4>New Products</h4>
                             <ul>
-                                <li><a href="~/product-list.html">Woman Cloth</a></li>
-                                <li><a href="~/product-list.html">Fashion Accessories</a></li>
-                                <li><a href="~/product-list.html"> Man Accessories</a></li>
-                                <li><a href="~/product-list.html"> Rubber made Toys</a></li>
+                                <li><a asp-controller="Product" asp-action="Index">Woman Cloth</a></li>
+                                <li><a asp-controller="Prodct" asp-action="Index">Fashion Accessories</a></li>
+                                <li><a asp-controller="Product" asp-action="Index"> Man Accessories</a></li>
+                                <li><a asp-controller="Product" asp-action="Index"> Rubber made Toys</a></li>
                             </ul>
 
                         </div>
@@ -344,11 +332,11 @@
                         <div class="footer-title ">
                             <h4>Support</h4>
                             <ul>
-                                <li><a href="#">Frequently Asked Questions</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Report a Payment Issue</a></li>
+                                <li><a asp-controller="Contact" asp-action="Index">Frequently Asked Questions</a></li>
+                                <li><a asp-controller="About" asp-action="Index">Terms &amp; Conditions</a></li>
+                                <li><a asp-controller="About" asp-action="Index">Privacy Policy</a></li>
+                                <li><a asp-controller="About" asp-action="Index">Privacy Policy</a></li>
+                                <li><a asp-controller="Contact" asp-action="Index">Report a Payment Issue</a></li>
                             </ul>
                         </div>
 
@@ -361,7 +349,7 @@
                                 Copyright ©
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> All rights reserved | This template is made with <i class="far fa-heart "></i> by <a href="~/https://colorlib.com " target="_blank ">Colorlib</a>
+                                </script> All rights reserved | This template is made with <i class="far fa-heart "></i> by <a href="https://colorlib.com" target="_blank ">Colorlib</a>
                             </p>
                         </div>
                     </div>
@@ -369,10 +357,10 @@
                         <div class="footer-copy-right float-end ">
 
                             <div class="footer-social ">
-                                <a href="#"><i class="fab fa-twitter "></i></a>
-                                <a href="#"><i class="fab fa-facebook-f "></i></a>
+                                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                                <a href="https://facebook.com"><i class="fab fa-facebook-f "></i></a>
                                 <a href="#"><i class="fab fa-behance "></i></a>
-                                <a href="#"><i class="fas fa-globe "></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
                             </div>
                         </div>
                     </div>

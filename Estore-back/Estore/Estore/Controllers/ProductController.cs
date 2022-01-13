@@ -51,27 +51,48 @@ namespace Estore.Controllers
             }
             Product product = await _context.Products.Include(p=>p.Productimages)
               .FirstOrDefaultAsync(p => p.Id == Id);
-           
 
+            string strBasket = HttpContext.Request.Cookies["basket"];
+
+            List<BasketVM> products = null;
+
+            if (strBasket == null)
+            {
+                products = new List<BasketVM>();
+            }
+            else
+            {
+                products = JsonConvert.DeserializeObject<List<BasketVM>>(strBasket);
+            }
+
+            var _Basket = products.FirstOrDefault(p => p.Id == Id);
+                if(_Basket == null)
+            {
+                BasketVM basketVM = new BasketVM
+                {
+                    Id = (int)Id,
+                    Title = product.Name,
+                    MainImage = product.Productimages.FirstOrDefault().Img,
+                    Price = product.Price,
+                    Quantity = 1
+                };
+                _Basket = basketVM;
+
+            }
+           
 
             ProductVM productVM = new ProductVM
             {
-                Product = await _context.Products.Include(p=>p.Productimages).FirstOrDefaultAsync(p=>p.Id==Id),
+                Product = await _context.Products.Include(p => p.Productimages).FirstOrDefaultAsync(p => p.Id == Id),
                 Subscribe = await _context.Subscribes.FirstOrDefaultAsync(),
-                //BasketVM  = new BasketVM
-                //{
-                //    Id = (int)Id,
-                //    Title = product.Name,
-                //    MainImage = product.Productimages.FirstOrDefault().Img,
-                //    Price = product.Price,
-                //    Count = 1
-                //}
+              Basket = _Basket,
 
 
-                 
 
 
-        };
+
+
+            };
 
 
             if (!ModelState.IsValid)

@@ -73,16 +73,7 @@ namespace Estore.Controllers
         }
 
 
-        //[HttpGet]
-        //public IActionResult CreateComment( )
-        //{
 
-
-
-        //    return View();
-
-
-        //}
 
 
 
@@ -90,47 +81,49 @@ namespace Estore.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateComment(int Id, BlogComments blogComments)
         {
+            //if (!ModelState.IsValid)
+            //{
+
+            //    return BadRequest();
+            //}
+
 
             if (await _context.Posts.FindAsync(Id) == null)
             {
                 return BadRequest();
             }
-            Post Post = await _context.Posts.FirstOrDefaultAsync(c => c.Id == Id);
-
+            Post Post = await _context.Posts.Include(b=>b.BlogComments).Include(b=>b.BlogWriter).FirstOrDefaultAsync(c => c.Id == Id);
+            var comments = Post.BlogComments;
 
 
 
            
              blogComments = new BlogComments {
-
+                 Name= blogComments.Name,
+                 SurName= blogComments.SurName,
+                 Text= blogComments.Text,
+                 Email = blogComments.Email,
                 CreatedAt = DateTime.Now,
                 PostId = Post.Id,
                 Post = Post
 
 
              };
-
-           
-
-            if (!ModelState.IsValid)
-            {
-
-                return BadRequest();
-            }
+            comments.Append(blogComments);
 
 
-           
-
-          
-            
-           
 
 
-           
+      
+
+
+
+
+
             await _context.BlogComments.AddAsync(blogComments);
+            _context.Update(Post);
             await _context.SaveChangesAsync();
-
-            return Redirect($"/Blogdetails/{Id}");
+            return RedirectToAction("Blogdetails",new {Id= Post.Id});
 
 
         }

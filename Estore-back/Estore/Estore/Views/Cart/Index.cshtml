@@ -1,7 +1,14 @@
 ﻿@using Estore.ViewModels.BasketViewModel; 
-@model IEnumerable<BasketVM>
+@model List<BasketVM>
 @{
     ViewData["Title"] = "Index";
+    double SubTotal = Model.Sum(p => p.Price * p.Quantity);
+
+//    List<int> productIDs = new List<int>();
+//    var _item = Model.FindAll(p => p.Id >0);
+//    var localitem = _item.Find(p => p.Id > 0).Id;
+//productIDs.Add(localitem);
+
 }
 
     <!-- Card area starts -->
@@ -21,38 +28,45 @@
                             </tr>
                         </thead>
                         <tbody>
+                        
+                               
+                                      @foreach (BasketVM item in Model)
+                           {
                             <tr>
+                         
                                 <td>
                                     <div class="media">
                                         <div class="d-flex">
-                                            <img src="images/cart1.webp">
+                                            <img src="images/@item.MainImage">
                                         </div>
                                         <div class="media-body">
-                                            <p>Minimalistic shop for multipurpose use</p>
+                                            <p>@item.Title</p>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    <h5>$360.00</h5>
+                                    <h5>$@item.Price</h5>
                                 </td>
                                 <td>
                                     <div class="product-count">
-                                        <input class="input-number" type="text" value="1" min="0" max="100">
 
-                                        <a class="input-number-decrement minuspilus"> <i class="fa fa-minus" aria-hidden="true"></i></a>
+                                       <input class="input-number" asp-for="@item.Quantity" type="number" id="quantity" name="Quantity" value="@item.Quantity" min="1" max="100">
+                                       <a class="input-number-decrement minuspilus"> <i class="fa fa-minus" aria-hidden="true"></i></a>
                                         <a class="input-number-increment minuspilus"> <i class="fa fa-plus" aria-hidden="true"></i></a>
+
 
                                     </div>
                                 </td>
+                              
                                 <td>
-                                    <h5>$720.00</h5>
+                                    <h5>$@((item.Price*item.Quantity).ToString("F2"))</h5>
                                 </td>
                             </tr>
-
+                              }
                             <tr class="bottom-button">
                                 <td>
                                     <div class="cupon-text float-start">
-                                        <a class="btn" href="#">Update Card</a>
+                                        <a type="submit" asp-controller="Cart" asp-action="AddBasket" asp-route-Id="" class="btn">Update Card</a>
                                     </div>
                                 </td>
                                 <td class="emptytd"></td>
@@ -75,7 +89,7 @@
                                     <h5>Subtotal</h5>
                                 </td>
                                 <td>
-                                    <h5>$2160.00</h5>
+                                    <h5>$@SubTotal.ToString("F2")</h5>
                                 </td>
                             </tr>
                             <tr class="shipping-area">
@@ -410,22 +424,4 @@
 
         </div>
     </section>
-    <!-- Card area ends -->
-
-     @* @foreach (BasketVM basketVM in Model)
-	                                            {
-                                                    <div class="cart-product">
-                                                        <a href="~/product-details.html" class="image">
-                                                            <img style="width: 120px !important; padding: 0 10px !important;" src="~/images/@basketVM.MainImage" alt="">
-                                                        </a>
-                                                        <div class="content">
-                                                            <h3 class="title">
-                                                                <a href="~/product-details.html">
-                                                                    @basketVM.Title
-                                                                </a>
-                                                            </h3>
-                                                            <p class="price"><span class="qty">@basketVM.Count ×</span> $@((basketVM.Count * basketVM.Price).ToString("F2"))</p>
-                                                            <button class="cross-btn"><i class="fas fa-times"></i></button>
-                                                        </div>
-                                                    </div>
-	                                            }*@
+     

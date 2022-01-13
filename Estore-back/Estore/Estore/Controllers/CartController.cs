@@ -25,7 +25,7 @@ namespace Estore.Controllers
         {
 
             string strBasket = HttpContext.Request.Cookies["basket"];
-            
+
             List<BasketVM> products = null;
 
             if (strBasket == null)
@@ -36,13 +36,15 @@ namespace Estore.Controllers
             {
                 products = JsonConvert.DeserializeObject<List<BasketVM>>(strBasket);
             }
-           
+            
 
 
-            return View(Json(products));
+
+            return View(products);
 
         }
-        public async Task<IActionResult> AddBasket(int? Id)
+
+        public async Task<IActionResult> AddBasket(int? Id,int Quantity)
         {
             if (Id == null)
                 return NotFound();
@@ -64,7 +66,10 @@ namespace Estore.Controllers
             {
                 products = JsonConvert.DeserializeObject<List<BasketVM>>(strBasket);
             }
-
+            if(Quantity == 0)
+            {
+                Quantity = 1;
+            }
 
             BasketVM basketVM = new BasketVM
             {
@@ -72,12 +77,12 @@ namespace Estore.Controllers
                 Title = product.Name,
                 MainImage = product.Productimages.FirstOrDefault().Img,
                 Price = product.Price,
-                Count = 1
+                Quantity = Quantity
             };
 
             if (products.Any(p => p.Id == Id))
             {
-                products.FirstOrDefault(p => p.Id == Id).Count += 1;
+                products.FirstOrDefault(p => p.Id == Id).Quantity += Quantity;
             }
             else
             {
@@ -86,7 +91,7 @@ namespace Estore.Controllers
 
             string strProduct = JsonConvert.SerializeObject(products);
 
-            HttpContext.Response.Cookies.Append("basket", strProduct, new CookieOptions { MaxAge = TimeSpan.FromMinutes(10) });
+            HttpContext.Response.Cookies.Append("basket", strProduct, new CookieOptions { MaxAge = TimeSpan.FromMinutes(100) });
 
 
 
@@ -95,22 +100,41 @@ namespace Estore.Controllers
             return RedirectToAction("Index", "Product");
         }
 
-        //public IActionResult ShowBasket()
-        //{
-        //    string strBasket = HttpContext.Request.Cookies["basket"];
+        public IActionResult ShowBasket()
+        {
+            string strBasket = HttpContext.Request.Cookies["basket"];
 
-        //    List<BasketVM> products = null;
+            List<BasketVM> products = null;
 
-        //    if (strBasket == null)
-        //    {
-        //        products = new List<BasketVM>();
-        //    }
-        //    else
-        //    {
-        //        products = JsonConvert.DeserializeObject<List<BasketVM>>(strBasket);
-        //    }
-        //    return Json(products);
-        //}
+            if (strBasket == null)
+            {
+                products = new List<BasketVM>();
+            }
+            else
+            {
+                products = JsonConvert.DeserializeObject<List<BasketVM>>(strBasket);
+            }
+            return Json(products);
+        }
+        public IActionResult RemoveCart(int? Id)
+        {
+            if(Id == null)
+            {
+                return BadRequest(Id);
+            }
+            string strBasket = HttpContext.Request.Cookies["basket"];
+            List<BasketVM> products = JsonConvert.DeserializeObject<List<BasketVM>>(strBasket);
+           BasketVM cart = products.Find(p => p.Id == Id);
+            if(cart == null)
+            {
+                return NotFound();
+            }
+            products.Remove(cart);
+            string strProduct = JsonConvert.SerializeObject(products);
 
+            HttpContext.Response.Cookies.Append("basket", strProduct, new CookieOptions { MaxAge = TimeSpan.FromMinutes(100) });
+            return RedirectToAction("Index", "Product");
+
+        }
     }
 }

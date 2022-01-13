@@ -6,6 +6,8 @@ namespace Estore.Models
 {
     public class BlogComments
     {
+        [Key]
+        [Required]
         public int Id { get; set; }
         [Required]
         [DataType(DataType.Text)]

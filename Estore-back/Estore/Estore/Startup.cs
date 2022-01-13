@@ -1,8 +1,10 @@
 using Estore.DAL;
+using Estore.Models;
 using Estore.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,8 +24,6 @@ namespace Estore
         {
             Configuration = configuration;
         }
-
-     
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews().AddNewtonsoftJson(options =>
@@ -33,20 +33,35 @@ namespace Estore
             {
                 options.UseSqlServer(Configuration.GetConnectionString("Default"));
             });
+
             services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(10);
             });
+
             services.AddScoped<LayoutService>();
+
+            services.AddIdentity<AppUser, IdentityRole>(identityOptions =>
+            {
+                identityOptions.Password.RequireDigit = true;
+                identityOptions.Password.RequiredLength = 8;
+                identityOptions.Password.RequireLowercase = true;
+                identityOptions.Password.RequireNonAlphanumeric = true;
+                identityOptions.Password.RequireUppercase = true;
+                identityOptions.Password.RequiredUniqueChars = 1;
+
+                identityOptions.User.RequireUniqueEmail = true;
+
+                identityOptions.Lockout.MaxFailedAccessAttempts = 3;
+                identityOptions.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+                identityOptions.Lockout.AllowedForNewUsers = true;
+            }).AddDefaultTokenProviders()
+            .AddEntityFrameworkStores<AppDbContext>();
+
             services.AddHttpContextAccessor();
-
-
-
-
-
         }
 
-       
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -64,7 +79,10 @@ namespace Estore
             app.UseRouting();
             app.UseStaticFiles();
 
-          
+            app.UseSession();
+            app.UseAuthentication();
+            app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {

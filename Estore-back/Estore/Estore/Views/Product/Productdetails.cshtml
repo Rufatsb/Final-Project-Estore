@@ -82,7 +82,7 @@
                                 <div class="product-count d-inline-block">
                                     <span class="input-number-decrement minuspilus"> <i class="fas fa-minus"></i></span>
 
-                                    <input asp-for=BasketVM.Count style="width: 100px;text-align: center;" class="input-number" type="number"  min="0" max="100">
+                                    <input style="width: 100px;text-align: center;" class="input-number" type="number" value="@Model.Basket.Quantity"  min="0" max="100">
                                     
                                     <span class="input-number-increment minuspilus"> <i class="fas fa-plus"></i></span>
                                    
@@ -91,7 +91,7 @@
                                 
                             </div>
                             <div class="add-to-card-btn">
-                                <a type="submit" asp-controller="Cart" asp-action="AddBasket" asp-route-Id="@Model.Product.Id" class="load-more">add to cart</a>
+                                <a type="submit" asp-controller="Cart" asp-action="AddBasket" asp-route-Id="@Model.Product.Id" asp-route-Quantity="@Model.Basket.Quantity" class="load-more">add to cart</a>
                             </div>
                             </form>
                         </div>

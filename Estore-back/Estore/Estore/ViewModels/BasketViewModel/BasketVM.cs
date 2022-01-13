@@ -9,9 +9,11 @@ namespace Estore.ViewModels.BasketViewModel
         public string Title { get; set; }
         public string MainImage { get; set; }
         public double Price { get; set; }
-        public int Count { get; set; }
+        public int Quantity { get; set; }
         public virtual Product Product { get; set; }
         public virtual IEnumerable<Product> Products{ get; set; }
+       
+
 
     }
 }
