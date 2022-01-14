@@ -28,7 +28,7 @@ namespace Pustok.Areas.Manage.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Products.Include(p=>p.Productimages).OrderByDescending(s=>s.Id).Take(8).ToListAsync());
+            return View(await _context.Products.Where(p=>p.Isdeleted==false).Include(p=>p.Productimages).OrderByDescending(s=>s.Id).Take(8).ToListAsync());
         }
 
         [HttpGet]
@@ -203,6 +203,19 @@ namespace Pustok.Areas.Manage.Controllers
 
 
             return RedirectToAction("Update",new { Id=productId});
+        }
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+
+            Product product = await _context.Products.Where(n => n.Isdeleted == false).Include(p=>p.Productimages).FirstOrDefaultAsync(n => n.Id == id);
+            if (product == null) return NotFound();
+            string path = Path.Combine(_env.WebRootPath, "images");
+
+            Helper.DeleteFile(path, product.Productimages.FirstOrDefault().Img);
+            product.Isdeleted = true;
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

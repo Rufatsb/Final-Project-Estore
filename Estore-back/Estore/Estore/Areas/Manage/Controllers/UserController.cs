@@ -150,5 +150,7 @@ namespace Pustok.Areas.Manage.Controllers
 
             return RedirectToAction("Index");
         }
+
+      
     }
 }
