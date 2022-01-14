@@ -61,8 +61,15 @@ using Estore.ViewModels.CategoryViewModel;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 9 "C:\Users\Ali Aliyev\Desktop\Final-Project-Estore\Final-Project-Estore\Estore-back\Estore\Estore\Views\_ViewImports.cshtml"
+using Estore.ViewModels.AccountViewModel;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"db865ae5d96dc8215325559bc003b88a7273350b", @"/Views/Shared/Components/Blog/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d57143e42e39f1afd6f41845c7aac5eb46771252", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"209deeccd7ac6be9763349b30c3e2d3a2311a0d5", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_Blog_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<BlogVM>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("#"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -101,7 +108,7 @@ using Estore.ViewModels.CategoryViewModel;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("   <div class=\"col-lg-4\">\r\n                    <div class=\"blog-right-container\">\r\n                        <div class=\"blog-right-item blog-right-search\">\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db865ae5d96dc8215325559bc003b88a7273350b7754", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db865ae5d96dc8215325559bc003b88a7273350b7999", async() => {
                 WriteLiteral(@"
                                 <div class=""form-group"">
                                     <div class=""input-group mb-3"">
@@ -174,7 +181,7 @@ using Estore.ViewModels.CategoryViewModel;
 #line hidden
 #nullable disable
             WriteLiteral("                                 <div class=\"blog-post-container\">\r\n                                <div style=\"width:46%;height:auto\" class=\"recent-post-img\">\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "db865ae5d96dc8215325559bc003b88a7273350b12109", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "db865ae5d96dc8215325559bc003b88a7273350b12354", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -200,7 +207,7 @@ AddHtmlAttributeValue("", 2213, post.Img, 2213, 9, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                </div>\r\n                                <div class=\"recent-post-text mt-0\">\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db865ae5d96dc8215325559bc003b88a7273350b14047", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db865ae5d96dc8215325559bc003b88a7273350b14292", async() => {
                 WriteLiteral("\r\n                                        <h3>");
 #nullable restore
 #line 48 "C:\Users\Ali Aliyev\Desktop\Final-Project-Estore\Final-Project-Estore\Estore-back\Estore\Estore\Views\Shared\Components\Blog\Default.cshtml"
@@ -312,7 +319,7 @@ AddHtmlAttributeValue("", 2213, post.Img, 2213, 9, false);
 #line hidden
 #nullable disable
             WriteLiteral("                                        <li>\r\n                                        <a style=\"cursor:pointer\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "db865ae5d96dc8215325559bc003b88a7273350b20152", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "db865ae5d96dc8215325559bc003b88a7273350b20397", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -353,7 +360,7 @@ AddHtmlAttributeValue("", 4186, item.Img, 4186, 9, false);
                                 Subscribe
                             </h4>
                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db865ae5d96dc8215325559bc003b88a7273350b22504", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db865ae5d96dc8215325559bc003b88a7273350b22749", async() => {
                 WriteLiteral(@"
                                 <div class=""form-group"">
                                     <div class=""input-group mb-3"">

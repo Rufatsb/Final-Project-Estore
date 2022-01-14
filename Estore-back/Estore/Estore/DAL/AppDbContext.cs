@@ -46,6 +46,9 @@ namespace Estore.DAL
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Productimages> Productimages { get; set; }
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
+        public virtual DbSet<Basket> Baskets { get; set; }
+        public virtual DbSet<Checkout> Checkouts { get; set; }
+
 
 
 

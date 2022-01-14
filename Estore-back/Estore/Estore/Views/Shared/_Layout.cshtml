@@ -1,5 +1,9 @@
 ﻿@using Estore.ViewModels.BasketViewModel; 
 @inject Estore.Services.LayoutService layoutService;
+@{ 
+    AppUserVM appUserVM = await layoutService.GetUser();
+}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,7 +55,7 @@
 
                                 <ul class="nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" asp-controller="Login" asp-action="Index"> My Account</a>
+                                        <a class="nav-link" asp-controller="Account" asp-action="Login"> My Account</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" asp-controller="Product" asp-action="Index">Shopping</a>
@@ -137,11 +141,7 @@
                             </div>
                             <ul class="bottom-header-right  d-flex d-lg-table-row">
 
-                                <li class="d-none d-xl-table-cell pt-3">
-                                    <div class="favorit-items">
-                                        <i class="far fa-heart"></i>
-                                    </div>
-                                </li>
+                              
                                 <li class="d-lg-table-cell shopping pt-3">
                                     <div class="shopping-card cart-block">
                                         <a asp-controller="Cart" asp-action="Index"><i class="fas fa-shopping-cart"></i></a>
@@ -208,7 +208,17 @@
                                  
                                     
                                 </li>
-                                <li class="d-none d-lg-table-cell"> <a href="login.html" class="btn header-btn">Sign in</a></li>
+                                
+                                  @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <p> Welcome @appUserVM.Name</p>
+                                            <a asp-controller="Account" asp-action="Logout" class="font-weight-bold">Logout</a>
+                                        }
+                                        else
+                                        {
+                                            <li class="d-none d-lg-table-cell"> <a asp-controller="Account" asp-action="Login" class="btn header-btn">Sign in</a></li> 
+                                <li class="d-none d-lg-table-cell"> <a asp-controller="Account" asp-action="Register" class="btn header-btn">Register</a></li>
+                                        }
 
 
                             </ul>
